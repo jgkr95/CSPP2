@@ -12,7 +12,8 @@ public class Solution {
 		rootsOfQuadrati(a, b, c);
 	}
 	/**
-		*@param a,b,c Need to write the rootsOfQuadraticEquation function and print the output.
+		* @param a,b,c this is.
+		*Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 	public static void rootsOfQuadrati(final int a, final int b, final int c) {
 		final int i = 4, j = 2;
