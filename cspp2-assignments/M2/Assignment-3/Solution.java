@@ -1,12 +1,17 @@
-/**
-*Program for power using recursion
-*/
 import java.util.Scanner;
-public class Solution {
+/**
+ * Class for solution.
+ */
+public final class Solution {
 	/**
-	Do not modify this main function.
-	*/
+	 * { var_description }.
+	 */
 	public static int res = 1;
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
@@ -14,12 +19,18 @@ public class Solution {
         long result = power(base, exponent);
         System.out.println(result);
 	}
-	
-	public static long power(int b, int e) {
+	/**
+	 * { function_description }.
+	 *
+	 * @param      b     { parameter_description }
+	 * @param      e     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public static long power(final int b,final int e) {
 		/**
-		*Need to write the power function and print the output.
-		*/
-		// int res = ;
+		 * { item_description }.
+		 */
 		if(e == 0) {
 
 			return 1;
