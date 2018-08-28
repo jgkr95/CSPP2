@@ -16,9 +16,12 @@ public class Solution {
 	*/
 	public static long power(int b, int e) {
 		// int res = ;
-		if(e == 0)
+		if(e == 0) {
+
 			return 1;
-		else
+		}
+		else {
 			return b * power(b, e-1);
+		}
 	}
 }
