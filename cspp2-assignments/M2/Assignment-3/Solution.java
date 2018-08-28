@@ -5,10 +5,10 @@ public class Solution {
 	*/
 	public static int res = 1;
 	public static void main(String[] args) {
-		Scanner s=new Scanner(System.in);      
+		Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result=power(base,exponent);
+        long result = power(base, exponent);
         System.out.println(result);
 	}
 	/*
@@ -16,9 +16,9 @@ public class Solution {
 	*/
 	public static long power(int b, int e) {
 		// int res = ;
-		if(e==0)
+		if(e == 0)
 			return 1;
 		else
-			return b*power(b,e-1);
+			return b * power(b, e-1);
 	}
 }
