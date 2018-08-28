@@ -38,8 +38,6 @@ public final class Solution {
         if (e == 0) {
             return 1;
         }
-        else {
-            return b * power(b, e - 1);
-        }
+        return b * power(b, e - 1);
     }
 }
