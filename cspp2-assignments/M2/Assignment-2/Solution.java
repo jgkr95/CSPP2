@@ -4,7 +4,9 @@ import java.util.Scanner;
  */
 public class Solution {
     private Solution() {
-        
+    /**
+     * { item_description }.
+     */
     }
     /**
         * @param args Do not modify this main function.
