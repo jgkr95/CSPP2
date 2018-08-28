@@ -11,7 +11,6 @@ public final class Solution {
 		 * { item_description }.
 		 */
 	}
-	public static int res = 1;
 	/**
 	 * { function_description }
 	 *
