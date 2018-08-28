@@ -6,6 +6,11 @@ public final class Solution {
 	/**
 	 * { var_description }.
 	 */
+	private Solution() {
+		/**
+		 * { item_description }.
+		 */
+	}
 	public static int res = 1;
 	/**
 	 * { function_description }
@@ -27,11 +32,11 @@ public final class Solution {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public static long power(final int b,final int e) {
+	public static long power(final int b, final int e) {
 		/**
 		 * { item_description }.
 		 */
-		if(e == 0) {
+		if (e == 0) {
 
 			return 1;
 		}
