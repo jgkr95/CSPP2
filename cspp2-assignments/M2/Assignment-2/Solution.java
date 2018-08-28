@@ -30,9 +30,9 @@ public class Solution {
      */
     public static void rootsOfQuadrati(final int a, final int b, final int c) {
         final int i = 4, j = 2;
-        double r1 = (-b - Math.sqrt((b * b) - (i * a * c)))/ (j * a);
-        double r2 = (-b + Math.sqrt((b * b) - (i * a * c)))/ (j * a);
-        System.out.println(r2+" "+r1);
+        double r1 = (-b - Math.sqrt((b * b) - (i * a * c))) / (j * a);
+        double r2 = (-b + Math.sqrt((b * b) - (i * a * c))) / (j * a);
+        System.out.println(r2 + " " + r1);
         // System.out.println(r2);
     }
 }
