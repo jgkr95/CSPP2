@@ -16,7 +16,7 @@ public class Solution {
 	*/
 	public static int power(int b, int e) {
 		// int res = ;
-		if(e==0)
+		if(e==1)
 			return 1;
 		else
 			return b*power(b,e-1);
