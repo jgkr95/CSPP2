@@ -1,6 +1,9 @@
+/**
+*Program for power using recursion
+*/
 import java.util.Scanner;
 public class Solution {
-	/*
+	/**
 	Do not modify this main function.
 	*/
 	public static int res = 1;
@@ -11,10 +14,11 @@ public class Solution {
         long result = power(base, exponent);
         System.out.println(result);
 	}
-	/*
-	Need to write the power function and print the output.
-	*/
+	
 	public static long power(int b, int e) {
+		/**
+		*Need to write the power function and print the output.
+		*/
 		// int res = ;
 		if(e == 0) {
 
