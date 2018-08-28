@@ -36,7 +36,6 @@ public final class Solution {
          * { item_description }.
          */
         if (e == 0) {
-
             return 1;
         }
         else {
