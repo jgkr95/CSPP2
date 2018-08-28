@@ -1,6 +1,11 @@
 import java.util.Scanner;
-
+/**
+ * Class for solution.
+ */
 public class Solution {
+    private Solution() {
+        
+    }
     /**
         * @param args Do not modify this main function.
     */
@@ -12,9 +17,12 @@ public class Solution {
         rootsOfQuadrati(a, b, c);
     }
     /**
-        * @param a,b,c this is.
-        *Need to write the rootsOfQuadraticEquation function and print the output.
-    */
+     * { function_description }.
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     * @param      c     { parameter_description }
+     */
     public static void rootsOfQuadrati(final int a, final int b, final int c) {
         final int i = 4, j = 2;
         double r1 = (-b - Math.sqrt((b * b) - (i * a * c)))/ (j * a);
