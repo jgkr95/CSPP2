@@ -15,7 +15,7 @@ public class Solution {
 		*@param a,b,c Need to write the rootsOfQuadraticEquation function and print the output.
 	*/
 	public static void rootsOfQuadrati(final int a, final int b, final int c) {
-		int i = 4, j = 2;
+		final int i = 4, j = 2;
 		double r1 = (-b - Math.sqrt((b * b) - (i * a * c)))/ (j * a);
 		double r2 = (-b + Math.sqrt((b * b) - (i * a * c)))/ (j * a);
 		System.out.println(r2+" "+r1);
