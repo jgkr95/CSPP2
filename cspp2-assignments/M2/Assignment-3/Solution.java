@@ -36,7 +36,7 @@ public final class Solution {
 			return 1;
 		}
 		else {
-			return b * power(b, e-1);
+			return b * power(b, e - 1);
 		}
 	}
 }
