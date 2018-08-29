@@ -36,6 +36,9 @@ public class Solution {
                 j++;
             }
         }
+        if (j == 0) {
+            return 1;
+        }
         return c[j-1];
     }
 }
