@@ -14,11 +14,11 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**
          * { var_description }.
          */
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0, individualNumber = 0, n2 = 0;
         final int ten = 10, seven = 7;
@@ -32,6 +32,6 @@ public final class Solution {
             n2 = n2 / ten;
             }
         }
-        System.out.println(count);    
+        System.out.println(count);
     }
 }
