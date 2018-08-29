@@ -25,7 +25,15 @@ public class Solution {
     /*
 	Need to write the gcd function and print the output.
 	*/
-    public static int gcd(int a, int b) {
+    /**
+     * { function_description }.
+     *
+     * @param      a     { parameter_description }
+     * @param      b     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public static int gcd(final int a, final int b) {
         int[] c;
         int j = 0;
         c = new int[Math.max(a, b)];
@@ -39,6 +47,6 @@ public class Solution {
         if (j == 0) {
             return 1;
         }
-        return c[j-1];
+        return c[j - 1];
     }
 }
