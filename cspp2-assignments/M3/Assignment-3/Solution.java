@@ -37,7 +37,7 @@ public final class Solution {
         int[] c;
         int j = 0;
         c = new int[Math.max(a, b)];
-        for (int i = 1; i < Math.min(a, b); i++) {
+        for (int i = 1; i < Math.max(a, b); i++) {
             if (a % i == 0 && b % i == 0) {
                 c[j] = i;
                 // System.out.println(j);
