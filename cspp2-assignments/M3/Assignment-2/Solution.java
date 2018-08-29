@@ -8,7 +8,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {}
+    private Solution() { }
     /**
      * { function_description }.
      *
@@ -18,13 +18,13 @@ public final class Solution {
         /**
          * { var_description }.
          */
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int count = 0, individualNumber = 0, n2 = 0;
         final int ten = 10, seven = 7;
-        for (int i=0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             n2 = i;
-            while(n2 > 0) {
+            while (n2 > 0) {
             individualNumber = n2 % ten;
             if (individualNumber == seven) {
                 count++;
