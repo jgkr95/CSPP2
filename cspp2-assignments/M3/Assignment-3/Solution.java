@@ -3,19 +3,19 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
     private Solution() { }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         int gcdo;
@@ -23,8 +23,8 @@ public class Solution {
         System.out.println(gcdo);
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
     /**
      * { function_description }.
      *
