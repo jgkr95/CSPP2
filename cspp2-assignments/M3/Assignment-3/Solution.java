@@ -44,7 +44,7 @@ public final class Solution {
                 j++;
             }
         }
-        if (j == 0) {
+        if (j == 1) {
             return 1;
         }
         return c[j - 1];
