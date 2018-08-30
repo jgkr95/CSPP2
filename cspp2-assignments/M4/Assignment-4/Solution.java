@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 /**
  * Class for solution.
@@ -16,16 +15,14 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String reverse = reverseString(s);    
+        String reverse = reverseString(s);
         System.out.println(reverse);
-        
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      s     { parameter_description }
      *
