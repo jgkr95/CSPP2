@@ -12,7 +12,7 @@ public class Solution
 		Scanner sc=new Scanner(System.in);
 		int n= sc.nextInt();
 		sc.nextLine();
-		for(int i=0;i<=n;i++){
+		for(int i=0;i<n;i++){
 			// System.out.println("HELLO");
 			String s = sc.nextLine();
 			// System.out.println(s + "HI");
@@ -22,8 +22,9 @@ public class Solution
 	}
 	public static String binaryToDecimal(String a) {
 		int count = 0;
-		int b = Integer.parseInt(a);
-		int indi = 0, num = 0;
+		System.out.println(a);
+		long b = Integer.parseInt(a);
+		long indi = 0, num = 0;
 		final int ten = 10;
 		while (b > 0) {
 			indi = b % ten;
