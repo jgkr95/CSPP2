@@ -22,12 +22,12 @@ public class Solution
 		int count = 0;
 		int b = Integer.parseInt(a);
 		int indi = 0, num = 0;
-
+		final int ten = 10;
 		while (b > 0) {
-			indi = b % 10;
+			indi = b % ten;
 			count++;
 			num += indi * Math.pow(2, count-1);
-			b = b / 10;
+			b = b / ten;
 		}
 		return String.valueOf(num);
 	}
