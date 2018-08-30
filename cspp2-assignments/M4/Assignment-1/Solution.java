@@ -1,11 +1,11 @@
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Class for solution.
  */
-public class Solution
-{/*
+public class Solution {
+	/*
 	Fill this main function to print maximum of given array
 	*/
 
@@ -16,9 +16,9 @@ public class Solution
 	 */
 	public static void main(String[] args)
 	{
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		int n= sc.nextInt();
-		int a[] = new int[n];
+		int[] a = new int[n];
 		for (int i = 0; i < n; i++) {
 			a[i] = sc.nextInt();
 		}
