@@ -7,12 +7,18 @@ public class Solution
 {/*
 	Do not modify this main function.
 	*/
+
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args)
 	{
-		Scanner sc=new Scanner(System.in);
-		int n= sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		sc.nextLine();
-		for(int i=0;i<n;i++){
+		for (int i = 0; i < n; i++) {
 			// System.out.println("HELLO");
 			String s = sc.nextLine();
 			// System.out.println(s + "HI");
@@ -20,6 +26,14 @@ public class Solution
 			System.out.println(res);
 		}
 	}
+
+	/**
+	 * { function_description }.
+	 *
+	 * @param      a     { parameter_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static String binaryToDecimal(String a) {
 		int count = 0;
 		long b = Long.parseLong(a);
@@ -29,7 +43,7 @@ public class Solution
 		while (b > 0) {
 			indi = b % ten;
 			count++;
-			num += indi * Math.pow(2, count-1);
+			num += indi * Math.pow(2, count - 1);
 			b = b / ten;
 		}
 		int num1 = (int) num;
