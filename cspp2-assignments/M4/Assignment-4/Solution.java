@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /*
     Do not modify the main function 
     */
@@ -16,11 +16,11 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args)
+    public static void main(final String[] args)
     {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        String reverse=reverseString(s);    
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String reverse = reverseString(s);    
         System.out.println(reverse);
         
     }
