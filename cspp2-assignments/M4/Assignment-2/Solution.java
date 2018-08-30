@@ -36,7 +36,9 @@ public class Solution {
             for (int i = 0; i < p; i++) {
             for (int j = 0; j < q; j++) {
                 c[i][j] = a[i][j] + b[i][j];
-                System.out.print(c[i][j]+" ");
+                System.out.print(c[i][j]);
+                if (j < q-1 )
+                System.out.print(" ");
             }
             System.out.println();
             }
