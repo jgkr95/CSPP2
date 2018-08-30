@@ -24,7 +24,8 @@ public class Solution
 		int count = 0;
 		System.out.println(a);
 		long b = Integer.parseInt(a);
-		long indi = 0, num = 0;
+		long indi = 0;
+		double num = 0;
 		final int ten = 10;
 		while (b > 0) {
 			indi = b % ten;
