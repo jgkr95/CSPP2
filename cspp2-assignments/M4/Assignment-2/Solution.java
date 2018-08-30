@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
     /**
      * Constructs the object.
@@ -37,7 +37,7 @@ public class Solution {
             for (int j = 0; j < q; j++) {
                 c[i][j] = a[i][j] + b[i][j];
                 System.out.print(c[i][j]);
-                if (j < q-1 )
+                if (j < q - 1)
                 System.out.print(" ");
             }
             System.out.println();
