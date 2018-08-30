@@ -23,7 +23,7 @@ public class Solution
 	public static String binaryToDecimal(String a) {
 		int count = 0;
 		System.out.println(a);
-		long b = Integer.parseInt(a);
+		long b = Long.parseLong(a);
 		long indi = 0;
 		double num = 0;
 		final int ten = 10;
