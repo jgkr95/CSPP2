@@ -17,12 +17,12 @@ public class Solution
 			String s = sc.nextLine();
 			// System.out.println(s + "HI");
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
+			
+			System.out.println(Integer.parseInt(res));
 		}
 	}
 	public static String binaryToDecimal(String a) {
 		int count = 0;
-		System.out.println(a);
 		long b = Long.parseLong(a);
 		long indi = 0;
 		double num = 0;
