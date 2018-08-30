@@ -22,7 +22,7 @@ public class Solution
 			// System.out.println("HELLO");
 			String s = sc.nextLine();
 			// System.out.println(s + "HI");
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			String res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 	}
@@ -34,7 +34,7 @@ public class Solution
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public static String binaryToDecimal(String a) {
+	public static String binaryToDecimal(final String a) {
 		int count = 0;
 		long b = Long.parseLong(a);
 		long indi = 0;
