@@ -17,8 +17,7 @@ public class Solution
 			String s = sc.nextLine();
 			// System.out.println(s + "HI");
 			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			
-			System.out.println(Integer.parseInt(res));
+			System.out.println(res);
 		}
 	}
 	public static String binaryToDecimal(String a) {
