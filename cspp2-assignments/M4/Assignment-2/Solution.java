@@ -37,8 +37,9 @@ public final class Solution {
             for (int j = 0; j < q; j++) {
                 c[i][j] = a[i][j] + b[i][j];
                 System.out.print(c[i][j]);
-                if (j < q - 1)
+                if (j < q - 1) {
                 System.out.print(" ");
+                }
             }
             System.out.println();
             }
@@ -46,7 +47,6 @@ public final class Solution {
 
         else {
             System.out.println("not possible");
-        
         }
     }
 }
