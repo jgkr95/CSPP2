@@ -32,7 +32,8 @@ public class Solution
 			num += indi * Math.pow(2, count-1);
 			b = b / ten;
 		}
-		return String.valueOf(num);
+		int num1 = (int) num;
+		return String.valueOf(num1);
 	}
 
 
