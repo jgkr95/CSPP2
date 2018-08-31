@@ -9,9 +9,10 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }.
+     * { This is main method reads the input for finding the gcd of
+     *  given numbers}.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final here
      */
     public static void main(final String[] args) {
 
@@ -26,12 +27,12 @@ public final class Solution {
     Need to write the gcd function and print the output.
     */
     /**
-     * { function_description }.
+     * { This is the method for finding the Gcd of the given numbers }.
      *
-     * @param      a     { parameter_description }
-     * @param      b     { parameter_description }
+     * @param      a     { a is the integer varibale}
+     * @param      b     { b is integer variable }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { retuns the Gcd of the given numbers as integer }
      */
     public static int gcd(final int a, final int b) {
         int[] c;
