@@ -9,7 +9,7 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { This is main method in which matrices are taken as input 
+     * { This is main method in which matrices are taken as input
      *  and add them if they are compatible}.
      *
      * @param      args  The arguments are final
