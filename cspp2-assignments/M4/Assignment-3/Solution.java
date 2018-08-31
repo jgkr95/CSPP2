@@ -12,9 +12,9 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }.
+     * { This is main function}.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,11 +30,11 @@ public final class Solution {
     }
 
     /**
-     * { function_description }.
+     * { This is the fucntioin where string of binary will be converted to decimal and returns the value}.
      *
-     * @param      a     { parameter_description }
+     * @param      a     { string of binary number }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { string(int) is returned }
      */
     public static String binaryToDecimal(final String a) {
         int count = 0;
