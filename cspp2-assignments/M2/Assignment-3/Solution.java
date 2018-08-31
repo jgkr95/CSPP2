@@ -4,17 +4,13 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
-     * { var_description }.
+     * { Constructor of the class solution }.
      */
-    private Solution() {
-        /**
-         * { item_description }.
-         */
-    }
+    private Solution() { }
     /**
-     * { function_description }.
+     * { This is main method, it reads input and prints power of it }.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -24,17 +20,14 @@ public final class Solution {
         System.out.println(result);
     }
     /**
-     * { function_description }.
+     * { Funtion to return the power of the given number }.
      *
-     * @param      b     { parameter_description }
-     * @param      e     { parameter_description }
+     * @param      b     { b is the integer type variable }
+     * @param      e     { e is integer type variable passed as exponent }
      *
-     * @return     { description_of_the_return_value }
+     * @return     { returns the b power e }
      */
     public static long power(final int b, final int e) {
-        /**
-         * { item_description }.
-         */
         if (e == 0) {
             return 1;
         }
