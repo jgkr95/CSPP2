@@ -6,9 +6,9 @@ public class Concatinate {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String str = s.next();
-        System.out.println(concatinate(str));
+        System.out.println(helloName(str));
     }
-    static String concatinate(String a) {
+    static String helloName(String a) {
         return "Hello "+ a +"!";
 
     }
