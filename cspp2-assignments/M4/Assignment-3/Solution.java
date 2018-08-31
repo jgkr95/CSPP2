@@ -30,7 +30,8 @@ public final class Solution {
     }
 
     /**
-     * { This is the fucntioin where string of binary will be converted to decimal and returns the value}.
+     * { This is the fucntioin where string of binary
+     *  will be converted to decimal and returns the value}.
      *
      * @param      a     { string of binary number }
      *
