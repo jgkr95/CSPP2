@@ -10,9 +10,9 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }.
+     * { This is main method to find the number of 7's bewtween 1 to N}.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final
      */
     public static void main(final String[] args) {
         /**
