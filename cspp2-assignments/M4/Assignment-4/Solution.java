@@ -11,9 +11,9 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }.
+     * { This is main function}.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final here
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -22,11 +22,11 @@ public final class Solution {
         System.out.println(reverse);
     }
     /**
-     * { function_description }.
+     * { This is the fucntion to reverse the string}.
      *
-     * @param      s     { parameter_description }
+     * @param      s     { s is string type of varible}
      *
-     * @return     { description_of_the_return_value }
+     * @return     { reverse of the string retuned }
      */
     public static String reverseString(final String s) {
         // System.out.println(Arrays.toString(s));
