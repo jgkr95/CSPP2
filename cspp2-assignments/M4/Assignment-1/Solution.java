@@ -11,9 +11,10 @@ public final class Solution {
     private Solution() { }
 
     /**
-     * { function_description }.
+     * { This is the main method in which we are finding max value
+     *  from given array and prints  }.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
