@@ -52,8 +52,7 @@ public final class Solution {
     //     int num1 = (int) num;
     //     return String.valueOf(num1);
     // }
-        int sum = 0, count = 0;
-        int indi = 0;
+        int sum = 0, count = 0, indi = 0;
         for (int i = a.length() - 1; i >= 0; i--) {
             indi = Character.getNumericValue(a.charAt(i));
             sum += indi * Math.pow(2, count);
