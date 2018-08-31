@@ -8,7 +8,8 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { this is main method and it reads inputs for finiding quadratic equation }
+     * { this is main method and it reads inputs for finiding quadratic
+     *  equation }.
      *
      * @param      args  The arguments are final here
      */
