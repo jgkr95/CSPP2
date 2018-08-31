@@ -9,9 +9,10 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * { function_description }.
+     * { This is main method in which matrices are taken as input 
+     *  and add them if they are compatible}.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are final
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
