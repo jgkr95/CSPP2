@@ -38,19 +38,28 @@ public final class Solution {
      * @return     { string(int) is returned }
      */
     public static String binaryToDecimal(final String a) {
-        int count = 0;
-        long b = Long.parseLong(a);
-        long indi = 0;
-        double num = 0;
-        final int ten = 10;
-        while (b > 0) {
-            indi = b % ten;
+    //     int count = 0;
+    //     long b = Long.parseLong(a);
+    //     long indi = 0;
+    //     double num = 0;
+    //     final int ten = 10;
+    //     while (b > 0) {
+    //         indi = b % ten;
+    //         count++;
+    //         num += indi * Math.pow(2, count - 1);
+    //         b = b / ten;
+    //     }
+    //     int num1 = (int) num;
+    //     return String.valueOf(num1);
+    // }
+        int sum = 0, count = 0;
+        int indi = 0;
+        for (int i = a.length()-1; i >= 0; i--) {
+            indi = Character.getNumericValue(a.charAt(i));
+            sum += indi * Math.pow(2, count);
             count++;
-            num += indi * Math.pow(2, count - 1);
-            b = b / ten;
         }
-        int num1 = (int) num;
-        return String.valueOf(num1);
+        return String.valueOf(sum);
     }
 
 
