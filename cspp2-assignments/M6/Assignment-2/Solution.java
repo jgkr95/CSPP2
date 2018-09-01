@@ -28,10 +28,11 @@ final class Solution {
         // final
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns ; j++) {
-                if (a[i][j] / 100 < 50) {
-                    a[i][j] = ((a[i][j] % 100) - 1) * 100;
+                if (a[i][j] % 100 < 50) {
+                    a[i][j] = ((a[i][j] / 100)) * 100;
+                    // System.out.println((a[i][j] % 100));
                 } else {
-                    a[i][j] = ((a[i][j] % 100) + 1) * 100;
+                    a[i][j] = ((a[i][j] / 100) + 1) * 100;
                 }
             }
         }
