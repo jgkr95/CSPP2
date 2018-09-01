@@ -24,20 +24,19 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
-	// write ypur code here
-        // final
+    // write ypur code here
+        final int hun = 100, fifty = 50;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns ; j++) {
-                if (a[i][j] % 100 < 50) {
-                    a[i][j] = ((a[i][j] / 100)) * 100;
+                if (a[i][j] % hun < fifty) {
+                    a[i][j] = ((a[i][j] / hun)) * hun;
                     // System.out.println((a[i][j] % 100));
                 } else {
-                    a[i][j] = ((a[i][j] / 100) + 1) * 100;
+                    a[i][j] = ((a[i][j] / hun) + 1) * hun;
                 }
             }
         }
         return a;
-	
     }
     /**
      * Main function.
