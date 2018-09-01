@@ -25,7 +25,7 @@ public final class Solution {
             if (i % two == 1) {
                 count = 0;
                 int m = i;
-                for (int j = three; j < m ; j++) {
+                for (int j = three; j < m; j++) {
                     if (i % j == 0) {
                         count++;
                     }
@@ -33,7 +33,6 @@ public final class Solution {
                 if (count != 0) {
                     System.out.println(i);
                     }
-                
             }
         }
     }
