@@ -3,17 +3,23 @@ import java.util.Scanner;
  * Class for input validator.
  */
 class InputValidator {
-    /*Write the atrributes and methods for InputValidator*/
+    /**
+     * { data is string type}.
+     */
     private String data;
     /**
      * Constructs the object.
      *
      * @param      string  The string is the input given by the user
      */
-    InputValidator(String string) {
+    InputValidator(final String string) {
         data = string;
     }
-
+    /**
+     * { Returns false length is lessthan 6 else true}.
+     *
+     * @return     { description_of_the_return_value }
+     */
     boolean validateData() {
         final int six = 6;
         if (data.length() < six) {
