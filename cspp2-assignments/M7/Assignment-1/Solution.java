@@ -14,6 +14,7 @@ class InputValidator
     InputValidator(String string) {
         data = string;
     }
+    
     boolean validateData() {
         final int six = 6;
         if (data.length() < six) {
@@ -23,7 +24,7 @@ class InputValidator
     }
 }
 /**
- * { Class Solution takes input and prints false 
+ * { Class Solution takes input and prints false
  * if length of name less than 6 else true}
  */
 public final class Solution {
