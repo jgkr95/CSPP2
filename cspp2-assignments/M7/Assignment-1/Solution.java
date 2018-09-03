@@ -14,13 +14,17 @@ class InputValidator {
 		data = string;
 	}
 	boolean validateData() {
-		if (data.length() < 6) {
+		final int six = 6;
+		if (data.length() < six) {
 			return false;
 		}
 		return true;
 	}
 }
-public class Solution {
+/**
+ * { Class Solution takes input and prints false if length of name less than 6 else true}
+ */
+public final class Solution {
 	/**
 	 * Constructs the object.
 	 */
@@ -29,7 +33,7 @@ public class Solution {
 	 * { This is main function to read the input}.
 	 * @param args {args of type String}
 	 */
-	public static void main(String args[])
+	public static void main(final String args[])
     {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
