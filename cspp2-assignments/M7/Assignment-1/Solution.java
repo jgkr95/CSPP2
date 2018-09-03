@@ -30,7 +30,7 @@ class InputValidator {
 }
 /**
  * { Class Solution takes input and prints false
- * if length of name less than 6 else true}
+ * if length of name less than 6 else true}.
  */
 public final class Solution {
     /**
