@@ -35,7 +35,13 @@ public class List {
     * a is integer array.
      */
     private int[] a;
+    /**
+     * { integer type size varibale }
+     */
     private int size;
+    /**
+     * { HUN and TEN final static variables }
+     */
     public static final int HUN = -100, TEN = 10;
 
     /*
