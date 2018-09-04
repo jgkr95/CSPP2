@@ -1,7 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
-
+/**
+ * List class implemented below
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -62,6 +63,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -93,6 +97,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * { In this fucntion we add the element to the array }.
+     *
+     * @param      item  The item is of integer type
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         int count = 0;
@@ -114,6 +123,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { In this method we find the size of the array i.e no of valid elements}
+     *
+     * @return     { Size of the array }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -145,6 +159,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * { In this method we remove element from the given index}
+     *
+     * @param      index  The index is of integer type
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -171,6 +190,13 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * { In this method we give element present at the given index }.
+     *
+     * @param      index  The index is of integer type
+     *
+     * @return     { integer type is returned either element or -1}
      */
     public int get(int index) {
         // Replace the code below to write the code for get
@@ -202,6 +228,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         int i;
@@ -229,6 +260,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * { function_description }
+     *
+     * @param      item  The item is of integer type
+     *
+     * @return     { retuns true if item present in array else false }
+     */
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < a.length; i++) {
@@ -243,6 +281,13 @@ public class List {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item is of integer type
+     *
+     * @return     { Returns index of the given element }
      */
     public int indexOf(int item) {
         // Replace the code below
