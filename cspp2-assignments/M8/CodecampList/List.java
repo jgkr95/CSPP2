@@ -151,7 +151,7 @@ public class List {
 		// a[index+1]=0
 		int i = 0;
 		try {
-			for (i = index - 1; a[i] != -100; i++) {
+			for (i = index; a[i] != -100; i++) {
 				a[i] = a[i + 1];
 			}
 			a[i] = -100;
