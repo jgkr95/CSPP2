@@ -102,7 +102,7 @@ public class List {
      *
      * @param      item  The item is of integer type
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         int count = 0;
         try {
@@ -261,7 +261,7 @@ public class List {
      * the item exists and otherwise false
      */
     /**
-     * { function_description }
+     * { Checks if the item presents in array or not}.
      *
      * @param      item  The item is of integer type
      *
@@ -302,7 +302,11 @@ public class List {
         }
         return -1;
     }
-
+    /**
+     * { This is main method}
+     *
+     * @param      args  The arguments of string type.
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
