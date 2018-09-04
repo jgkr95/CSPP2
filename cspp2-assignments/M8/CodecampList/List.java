@@ -212,7 +212,7 @@ public class List {
 		for (i = 0; a[i] != -100; i++) {
 			copyarray[i] = a[i];
 			strofarray += a[i];
-			if (i<s) {
+			if (i<s-1) {
 				strofarray += ',';
 			}
 		}
