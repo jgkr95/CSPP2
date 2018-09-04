@@ -33,7 +33,7 @@ public class List {
     // that's the job of the List constructor
     private int[] a;
     private int size;
-    final public static int hun = -100, ten = 10;
+    public final static int hun = -100, ten = 10;
 
     /*
      * What are the other class variables needed for creating a list?
