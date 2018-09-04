@@ -36,11 +36,11 @@ public class List {
      */
     private int[] a;
     /**
-     * { integer type size varibale }
+     * { integer type size varibale }.
      */
     private int size;
     /**
-     * { HUN and TEN final static variables }
+     * { HUN and TEN final static variables }.
      */
     public static final int HUN = -100, TEN = 10;
 
