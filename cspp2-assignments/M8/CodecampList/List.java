@@ -125,7 +125,7 @@ public class List {
      * The method returns an int. Empty list should return 0.
      */
     /**
-     * { In this method we find the size of the array i.e no of valid elements}
+     * { In this method we find the size of the array i.e no of valid elements}.
      *
      * @return     { Size of the array }
      */
@@ -160,7 +160,7 @@ public class List {
      * The method returns void (nothing)
      */
     /**
-     * { In this method we remove element from the given index}
+     * { In this method we remove element from the given index}.
      *
      * @param      index  The index is of integer type
      */
@@ -235,12 +235,12 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        int i;
+        int i, con = 0;
         String strofarray = "[";
         for (i = 0; a[i] != hun; i++) {
-            // copyarray[i]=a[i];
+            con++;
         }
-        int s = i;
+        int s = con;
         int[] copyarray = new int[i];
         for (i = 0; a[i] != hun; i++) {
             copyarray[i] = a[i];
