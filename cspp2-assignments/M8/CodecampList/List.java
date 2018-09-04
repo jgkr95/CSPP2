@@ -69,8 +69,8 @@ public class List {
 		// In the case of the list, it should be empty but
 		// it should be initialized with an array size like 10
 		a = new int[10];
-		for (int i=0;i<a.length;i++){
-			a[i]=-100;
+		for (int i = 0; i < a.length; i++) {
+			a[i] = -100;
 		}
 		size = 0;
 
@@ -96,12 +96,11 @@ public class List {
 		//Inserts the specified element at the end of the list.
 		int count = 0;
 		try {
-		for (int i = 0; a[i] != -100; i++) {
-			count++;
-		}
-		a[count] = item;
-		}
-		catch(Exception e) {
+			for (int i = 0; a[i] != -100; i++) {
+				count++;
+			}
+			a[count] = item;
+		} catch (Exception e) {
 			System.out.println("Invalid Position Exception");
 		}
 		// a[count] = item;
@@ -149,14 +148,13 @@ public class List {
 		// Think about what to do to the size variable.
 		// a[index] = a[index+1];
 		// a[index+1]=0
-		int i =0;
+		int i = 0;
 		try {
-		for (i = index-1; a[i] != -100; i++) {
-			a[i] = a[i + 1];
-		}
-		a[i] = -100;
-		}
-		catch (Exception e) {
+			for (i = index - 1; a[i] != -100; i++) {
+				a[i] = a[i + 1];
+			}
+			a[i] = -100;
+		} catch (Exception e) {
 			System.out.println("Invalid Position Exception");
 		}
 	}
@@ -205,12 +203,12 @@ public class List {
 	public String toString() {
 		// Replace the code below
 		int i;
-		for (i=0;a[i]!=-100;i++) {
+		for (i = 0; a[i] != -100; i++) {
 			// copyarray[i]=a[i];
 		}
 		int[] copyarray = new int[i];
-		for (i=0;a[i]!=-100;i++) {
-			copyarray[i]=a[i];
+		for (i = 0; a[i] != -100; i++) {
+			copyarray[i] = a[i];
 		}
 		// System.out.println(copyarray.toString());
 		return Arrays.toString(copyarray);
@@ -224,8 +222,8 @@ public class List {
 	 */
 	public boolean contains(int item) {
 		// Replace the code below
-		for (int i=0;i<a.length;i++) {
-			if(item == a[i]) {
+		for (int i = 0; i < a.length; i++) {
+			if (item == a[i]) {
 				return true;
 			}
 		}
@@ -240,13 +238,12 @@ public class List {
 	public int indexOf(int item) {
 		// Replace the code below
 		try {
-		for(int i=0;i<a.length;i++) {
-			if (a[i]==item) {
-				return i;
+			for (int i = 0; i < a.length; i++) {
+				if (a[i] == item) {
+					return i;
+				}
 			}
-		}
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println("Index Out of Bounds Exception");
 		}
 		return -1;
