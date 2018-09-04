@@ -31,9 +31,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] a; 
+    private int[] a;
     private int size;
-    public static int hun, ten;
+    public static final int HUN = -100, ten = 10;
 
     /*
      * What are the other class variables needed for creating a list?
@@ -73,11 +73,9 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        ten = 10;
-        hun = -100;
         a = new int[ten];
         for (int i = 0; i < a.length; i++) {
-            a[i] = hun;
+            a[i] = HUN;
         }
         size = 0;
 
@@ -108,7 +106,7 @@ public class List {
         //Inserts the specified element at the end of the list.
         int count = 0;
         try {
-            for (int i = 0; a[i] != hun; i++) {
+            for (int i = 0; a[i] != HUN; i++) {
                 count++;
             }
             a[count] = item;
@@ -135,7 +133,7 @@ public class List {
         // replace the code below to implement the size method
         int i;
         size = 0;
-        for (i = 0; a[i] != hun; i++) {
+        for (i = 0; a[i] != HUN; i++) {
             size++;
         }
         return size;
@@ -173,10 +171,10 @@ public class List {
         // a[index+1]=0
         int i = 0;
         try {
-            for (i = index; a[i] != hun; i++) {
+            for (i = index; a[i] != HUN; i++) {
                 a[i] = a[i + 1];
             }
-            a[i] = hun;
+            a[i] = HUN;
         } catch (Exception e) {
             System.out.println("Invalid Position Exception");
         }
@@ -202,7 +200,7 @@ public class List {
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
-        if (a[index] != hun) {
+        if (a[index] != HUN) {
             return a[index];
         } else if (index > size) {
             return -1;
@@ -239,12 +237,12 @@ public class List {
         // Replace the code below
         int i, con = 0;
         String strofarray = "[";
-        for (i = 0; a[i] != hun; i++) {
+        for (i = 0; a[i] != HUN; i++) {
             con++;
         }
         int s = con;
         int[] copyarray = new int[i];
-        for (i = 0; a[i] != hun; i++) {
+        for (i = 0; a[i] != HUN; i++) {
             copyarray[i] = a[i];
             strofarray += a[i];
             if (i < s - 1) {
