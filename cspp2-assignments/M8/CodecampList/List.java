@@ -250,9 +250,9 @@ public class List {
             con++;
         }
         int s = con;
-        int[] copyarray = new int[i];
+        // int[] copyarray = new int[i];
         for (i = 0; a[i] != HUN; i++) {
-            copyarray[i] = a[i];
+            // copyarray[i] = a[i];
             strofarray += a[i];
             if (i < s - 1) {
                 strofarray += ',';
