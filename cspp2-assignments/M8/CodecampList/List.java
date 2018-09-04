@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**
- * List class implemented below
+ * List class implemented below.
  */
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -164,7 +164,7 @@ public class List {
      *
      * @param      index  The index is of integer type
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         // a[index] = a[index+1];
@@ -198,7 +198,7 @@ public class List {
      *
      * @return     { integer type is returned either element or -1}
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (a[index] != hun) {
             return a[index];
@@ -267,7 +267,7 @@ public class List {
      *
      * @return     { retuns true if item present in array else false }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < a.length; i++) {
             if (item == a[i]) {
@@ -289,7 +289,7 @@ public class List {
      *
      * @return     { Returns index of the given element }
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         try {
             for (int i = 0; i < a.length; i++) {
