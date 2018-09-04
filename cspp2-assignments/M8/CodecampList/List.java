@@ -203,15 +203,22 @@ public class List {
 	public String toString() {
 		// Replace the code below
 		int i;
+		String strofarray = "[";
 		for (i = 0; a[i] != -100; i++) {
 			// copyarray[i]=a[i];
 		}
+		int s=i;
 		int[] copyarray = new int[i];
 		for (i = 0; a[i] != -100; i++) {
 			copyarray[i] = a[i];
+			strofarray += a[i];
+			if (i<s) {
+				strofarray += ',';
+			}
 		}
+		strofarray+=']';
 		// System.out.println(copyarray.toString());
-		return Arrays.toString(copyarray);
+		return strofarray;
 	}
 
 	/*
