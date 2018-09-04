@@ -31,9 +31,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    private int[] a;
+    private int[] a; 
     private int size;
-    public static final int hun = -100, ten = 10;
+    public static int hun, ten;
 
     /*
      * What are the other class variables needed for creating a list?
@@ -73,6 +73,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
+        ten = 10;
+        hun = -100;
         a = new int[ten];
         for (int i = 0; i < a.length; i++) {
             a[i] = hun;
