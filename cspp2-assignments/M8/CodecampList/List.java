@@ -117,10 +117,11 @@ public class List {
 	public int size() {
 		// replace the code below to implement the size method
 		int i;
+		size = 0;
 		for (i = 0; a[i] != -100; i++) {
 			size++;
 		}
-		return i;
+		return size;
 	}
 
 	/*
