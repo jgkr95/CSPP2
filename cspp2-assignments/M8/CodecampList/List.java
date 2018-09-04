@@ -31,6 +31,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * a is integer array
+     */
     private int[] a;
     private int size;
     public static final int HUN = -100, TEN = 10;
