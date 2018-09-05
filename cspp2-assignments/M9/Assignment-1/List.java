@@ -245,7 +245,6 @@ public class List {
     public String toString() {
         // Replace the code below
         int i, con = 0;
-        System.out.println("GANDHI");
         String strofarray = "[";
         for (i = 0; a[i] != HUN; i++) {
             con++;
