@@ -283,7 +283,7 @@ public class List {
         // write the logic
         try {
         int[] newlist = new int[list.length];
-        for (int i = size; i > index; i--) {
+        for (int i = size; i >= index; i--) {
             list[i + 1] = list[i];
         }
         list[index] = item;
