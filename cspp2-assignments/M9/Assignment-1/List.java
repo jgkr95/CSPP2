@@ -94,14 +94,14 @@ public class List {
         // That is the initial value to use for size.
 
     }
-    // public List(int n) {
-    //     a = new int[n];
-    //     for (int i = 0; i < a.length; i++) {
-    //         a[i] = HUN;
-    //     }
-    //     size = 0;
+    public List(int n) {
+        a = new int[n];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = HUN;
+        }
+        size = 0;
 
-    // }
+    }
 
     /*
      * The add method does what the name suggests.
