@@ -282,14 +282,13 @@ public class List {
     public void add(int index, int item) {
         // write the logic
         try {
-        int[] newlist = new int[list.length];
-        for (int i = size; i >= index; i--) {
-            list[i + 1] = list[i];
-        }
-        list[index] = item;
-        size++;
-        }
-        catch (Exception e) {
+            int[] newlist = new int[list.length];
+            for (int i = size; i >= index; i--) {
+                list[i + 1] = list[i];
+            }
+            list[index] = item;
+            size++;
+        } catch (Exception e) {
             System.out.println("Negative Index Exception");
         }
     }
@@ -329,7 +328,7 @@ public class List {
                     } else {
                         if (t.length > 1)
                             l.add(Integer.parseInt(t[0])
-                                , Integer.parseInt(t[1]));
+                                  , Integer.parseInt(t[1]));
                     }
                 }
                 break;
