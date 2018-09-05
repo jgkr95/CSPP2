@@ -30,10 +30,10 @@ public class Fibonacci {
 	public static List fib(int n) {
 		// todo - complete this method
 		int a = 0, b = 1, fibo, count = 0;
-		List l = new List(n);
+		List l = new List();
 		l.add(a);
 		l.add(b);
-		while (count < n - 2) {
+		while (count < n - 1) {
 			fibo = a + b;
 			l.add(fibo);
 			a = b;
