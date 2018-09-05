@@ -287,6 +287,7 @@ public class List {
             list[i+1]=list[i];
         }
         list[index]=item;
+        size++;
 
     }
     
