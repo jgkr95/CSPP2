@@ -33,7 +33,7 @@ public class Fibonacci {
 		List l = new List();
 		l.add(a);
 		l.add(b);
-		while (count < n - 1) {
+		while (count < n - 2) {
 			fibo = a + b;
 			l.add(fibo);
 			a = b;
