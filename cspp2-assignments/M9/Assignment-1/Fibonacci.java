@@ -17,36 +17,35 @@ import java.util.Scanner;
  *
  */
 
-public class Fibonacci
-{
-    /*
-     * fib is a static method takes a argument n
-     * n is the count of the fibonacci numbers to be generated.
-     * The method returns a List with the n fibonacci numbers.
-     *
-     * Look for the hint.txt if some of the testcases fail.
-     */
-    
-    
-    public static List fib(int n) {
-        // todo - complete this method
-        int a = 0, b=1,fibo,count=0;
-    	List l=new List();
-        l.add(a);
-    	l.add(b);
-        while (count <n-2) {
-        	fibo = a+b;
-        	l.add(fibo);
-        	a = b;
-        	b = fibo;
-        	count++;
-        }
-        return l;
-    }
+public class Fibonacci {
+	/*
+	 * fib is a static method takes a argument n
+	 * n is the count of the fibonacci numbers to be generated.
+	 * The method returns a List with the n fibonacci numbers.
+	 *
+	 * Look for the hint.txt if some of the testcases fail.
+	 */
+
+
+	public static List fib(int n) {
+		// todo - complete this method
+		int a = 0, b = 1, fibo, count = 0;
+		List l = new List(n);
+		l.add(a);
+		l.add(b);
+		while (count < n - 2) {
+			fibo = a + b;
+			l.add(fibo);
+			a = b;
+			b = fibo;
+			count++;
+		}
+		return l;
+	}
 
 	public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        System.out.println(fib(n));
-    }
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		System.out.println(fib(n));
+	}
 }
