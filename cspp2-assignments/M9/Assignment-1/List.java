@@ -242,27 +242,27 @@ public class List {
      *
      * @return     String representation of the object.
      */
-    // public String toString() {
-    //     // Replace the code below
-    //     int i, con = 0;
-    //     System.out.println("GANDHI");
-    //     String strofarray = "[";
-    //     for (i = 0; a[i] != HUN; i++) {
-    //         con++;
-    //     }
-    //     int s = con;
-    //     // int[] copyarray = new int[i];
-    //     for (i = 0; a[i] != HUN; i++) {
-    //         // copyarray[i] = a[i];
-    //         strofarray += a[i];
-    //         if (i < s - 1) {
-    //             strofarray += ',';
-    //         }
-    //     }
-    //     strofarray += ']';
-    //     // System.out.println(copyarray.toString());
-    //     return strofarray;
-    // }
+    public String toString() {
+        // Replace the code below
+        int i, con = 0;
+        System.out.println("GANDHI");
+        String strofarray = "[";
+        for (i = 0; a[i] != HUN; i++) {
+            con++;
+        }
+        int s = con;
+        // int[] copyarray = new int[i];
+        for (i = 0; a[i] != HUN; i++) {
+            // copyarray[i] = a[i];
+            strofarray += a[i];
+            if (i < s - 1) {
+                strofarray += ',';
+            }
+        }
+        strofarray += ']';
+        // System.out.println(copyarray.toString());
+        return strofarray;
+    }
 
     /*
      * Contains return true if the list has
