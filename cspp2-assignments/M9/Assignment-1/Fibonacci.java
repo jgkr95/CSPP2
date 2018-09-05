@@ -25,8 +25,18 @@ public class Fibonacci {
 	 *
 	 * Look for the hint.txt if some of the testcases fail.
 	 */
+	/**
+	 * Constructs the object.
+	 */
+	private Fibonacci() { }
 
-
+	/**
+	 * { Funciton append fibonaccis series}
+	 *
+	 * @param      n     { n is of integer type}
+	 *
+	 * @return     { Retunrns List object }
+	 */
 	public static List fib(int n) {
 		// todo - complete this method
 		int a = 0, b = 1, fibo, count = 0;
