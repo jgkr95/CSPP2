@@ -281,13 +281,17 @@ public class List {
         */
     public void add(int index, int item) {
         // write the logic
+        try {
         int[] newlist = new int[list.length];
         for (int i = size; i > index; i--) {
             list[i + 1] = list[i];
         }
         list[index] = item;
         size++;
-
+        }
+        catch (Exception e) {
+            System.out.println("Negative Index Exception");
+        }
     }
 
     /* Returns the count of occurances of a given item in the list*/
