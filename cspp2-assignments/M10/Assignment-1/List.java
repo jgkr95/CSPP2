@@ -65,7 +65,7 @@ final class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     /**
-    * size
+    * size.
     */
     private int size;
 
