@@ -123,8 +123,9 @@ public class StringList implements StringListInterface {
         if(size==list.length) {
             resize();
             add(item);
-        }
+        } else{
         list[size++] = item;
+        }
 
     }
     public void resize() {
@@ -227,9 +228,6 @@ public class StringList implements StringListInterface {
      *
      */
     public String toString() {
-        if (size==0){
-            return "[]";
-        }
         String strlist = "[";
         for (int i = 0; i < size; i++) {
             strlist += list[i];
