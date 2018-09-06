@@ -6,6 +6,7 @@ import java.io.BufferedInputStream;
  * To import Scanner.
  */
 import java.util.Scanner;
+import java.lang.String;
 /**
  * { Class list starts here }.
  */
