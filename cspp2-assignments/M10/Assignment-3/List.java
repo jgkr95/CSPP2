@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Scanner;
-
+import java.lang.*;
 /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -157,7 +157,7 @@ public class List<E> {
     public boolean contains(E item) {
 		//Write logic for contains method
         for (int i = 0; i < size; i++) {
-            if (item == list[(i)]) {
+            if (item.equals(list[(i)])){
                 return true;
             }
         }
