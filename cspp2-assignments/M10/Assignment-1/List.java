@@ -233,7 +233,7 @@ public class List {
      */
     public String toString() {
         if(size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
@@ -269,8 +269,12 @@ public class List {
     array to the end of list*/
 public void addAll(int[] items) {
         // write the logic
+		try {
         for (int i = 0; i < items.length; i++) {
             list[size++] = items[i];
+        }
+    	} catch (Exception e) {
+            System.out.println("Negative Index Exception");
         }
     }
 
