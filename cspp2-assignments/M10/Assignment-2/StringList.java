@@ -122,10 +122,9 @@ public class StringList implements StringListInterface {
         //Inserts the specified element at the end of the list.
         if(size==list.length) {
             resize();
-            add(item);
-        } else{
-        list[size++] = item;
+            // add(item);
         }
+        list[size++] = item;
 
     }
     public void resize() {
