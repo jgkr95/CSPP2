@@ -80,7 +80,7 @@ public class StringList implements StringListInterface {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new String[10];
+        list = new String[20];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -120,10 +120,10 @@ public class StringList implements StringListInterface {
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
-        if(size==list.length) {
-            resize();
-            add(item);
-        }
+        // if(size==list.length) {
+        //     resize();
+        //     add(item);
+        // }
         list[size++] = item;
 
     }
@@ -181,7 +181,7 @@ public class StringList implements StringListInterface {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index > -1 && index < size) {
-            for (int i = index; i < size; i++) {
+            for (int i = index; i < size-1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
