@@ -124,7 +124,7 @@ final class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
-        if (size==list.length){
+        if (size == list.length) {
             resize();
         }
         list[size++] = item;
@@ -334,18 +334,18 @@ final class List {
     public void addAll(final int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
-            if(size==list.length) {
+            if (size == list.length) {
                 resize();
             }
             list[size++] = items[i];
         }
     }
-   /**
-    * { Adds the element at particular position}
-    *
-    * @param      index  The index
-    * @param      item   The item
-    */
+    /**
+     * { Adds the element at particular position}
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void add(final int index, final int item) {
         // write the logic
         try {
@@ -362,7 +362,7 @@ final class List {
 
     /* Returns the count of occurances of a given item in the list*/
     /**
-     * { counts the occurence of the item}
+     * { counts the occurence of the item}.
      *
      * @param      item  The item is of integer
      *
@@ -406,7 +406,7 @@ final class List {
                     } else {
                         if (t.length > 1) {
                             l.add(Integer.parseInt(t[0]),
-                                Integer.parseInt(t[1]));
+                                  Integer.parseInt(t[1]));
                         }
                     }
                 }
