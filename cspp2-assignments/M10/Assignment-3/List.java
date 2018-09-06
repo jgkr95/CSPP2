@@ -38,6 +38,9 @@ public class List<E> {
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
+        if(size==list.length) {
+            resize();
+        }
         list[(size++)] = item;
     }
     /*Inserts all the elements of specified int 
@@ -55,6 +58,13 @@ public class List<E> {
      * 
      * The method returns an int. Empty list should return 0.
      */
+    public void resize() {
+                // list = ((E[])new Object[param]);
+
+        E[] newlist=((E[])new Object[2*list.length]);
+        System.arraycopy(list,0,newlist,0,list.length);
+        list=newlist;
+    }
     public int size() {
         return size;
     }
