@@ -1,4 +1,10 @@
+/**
+ * To import BufferedInputStream.
+ */
 import java.io.BufferedInputStream;
+/**
+ * To import Scanner.
+ */
 import java.util.Scanner;
 /**
  * { Class list starts here }.
@@ -73,7 +79,8 @@ final class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int a = 10;
+        list = new int[a];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -101,7 +108,7 @@ final class List {
      *
      * @param      capacity  The capacity is of integer type
      */
-    public List(final int capacity) {
+    List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -122,7 +129,7 @@ final class List {
      *
      * @param      item  The item is of integer type
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
             resize();
@@ -140,7 +147,7 @@ final class List {
 
     /*
      *
-     * Resize the list
+     * Resize the list.
      * Sometimes the clients of the ADT won't know the expected list capacity
      * To solve this the list has to grow dynamically
      * when the maximum capacity is reached and there is no room to add items.
