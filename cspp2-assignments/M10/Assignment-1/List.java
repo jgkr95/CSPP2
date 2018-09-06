@@ -36,6 +36,9 @@ final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    * list array.
+    */
     private int[] list;
 
     /*
@@ -61,6 +64,9 @@ final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    * size
+    */
     private int size;
 
     /*
@@ -137,7 +143,7 @@ final class List {
         list[size++] = item;
     }
     /**
-     * { Increases the capacity of the array }
+     * { Increases the capacity of the array }.
      */
     public void resize() {
         int[] newlist = new int[2 * list.length];
@@ -304,7 +310,7 @@ final class List {
      * the item exists and otherwise false
      */
     /**
-     * { true if item exists in list else false}
+     * { true if item exists in list else false}.
      *
      * @param      item  The item
      *
