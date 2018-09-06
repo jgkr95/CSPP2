@@ -278,6 +278,9 @@ public class List {
     public void addAll(int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
+            if(size==list.length) {
+                resize();
+            }
             list[size++] = items[i];
         }
     }
