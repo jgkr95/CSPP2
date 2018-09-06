@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * { Class list starts here }.
+ */
 final class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -61,7 +63,9 @@ final class List {
      */
 
 
-
+    /**
+     * Constructs the object for initialisation.
+     */
     List() {
 
         // what are the two variables to be initialized here?
@@ -92,6 +96,11 @@ final class List {
      * constructor.
      *
      */
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity is of integer type
+     */
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
@@ -108,6 +117,11 @@ final class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * { Adds the element to the list array }.
+     *
+     * @param      item  The item is of integer type
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
         if (size==list.length){
@@ -115,6 +129,9 @@ final class List {
         }
         list[size++] = item;
     }
+    /**
+     * { Increases the capacity of the array }
+     */
     public void resize() {
         int[] newlist = new int[2 * list.length];
         System.arraycopy(list, 0, newlist, 0, list.length);
@@ -161,6 +178,11 @@ final class List {
      *
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * { Gives the size of the array }.
+     *
+     * @return     { returns the size }
+     */
     public int size() {
         return size;
     }
@@ -185,7 +207,11 @@ final class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
+    /**
+     * { removes the given element }.
+     *
+     * @param      index  The index is of integer type
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -209,6 +235,13 @@ final class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * { gets elemement at index position }.
+     *
+     * @param      index  The index
+     *
+     * @return     { returns the array element }
      */
     public int get(final int index) {
         if (index < 0 || index >= size) {
@@ -238,6 +271,11 @@ final class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the list.
+     */
     public String toString() {
         if (size == 0)
             return "[]";
@@ -256,6 +294,13 @@ final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * { true if item exists in list else false}
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
@@ -264,6 +309,13 @@ final class List {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { returns index position or -1}
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
@@ -274,6 +326,11 @@ final class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
+    /**
+     * Adds all ellement in array to the list.
+     *
+     * @param      items  The items are is of array type
+     */
     public void addAll(final int[] items) {
         // write the logic
         for (int i = 0; i < items.length; i++) {
@@ -283,12 +340,12 @@ final class List {
             list[size++] = items[i];
         }
     }
-
-    /*
-       Inserts the specified element at the specified index
-    by moving all the elements to the right.
-           The method returns void (nothing)
-        */
+   /**
+    * { Adds the element at particular position}
+    *
+    * @param      index  The index
+    * @param      item   The item
+    */
     public void add(final int index, final int item) {
         // write the logic
         try {
@@ -304,6 +361,13 @@ final class List {
     }
 
     /* Returns the count of occurances of a given item in the list*/
+    /**
+     * { counts the occurence of the item}
+     *
+     * @param      item  The item is of integer
+     *
+     * @return     { returns the count of the item}
+     */
     public int count(final int item) {
         // write the logic
         int count = 0;
@@ -315,7 +379,11 @@ final class List {
         return count;
     }
 
-
+    /**
+     * { main fucntion}.
+     *
+     * @param      args  The arguments are of string type
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
