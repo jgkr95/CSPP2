@@ -170,9 +170,9 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        // if (size == 0) {
-        //  return "[]";
-        // } else {
+        if (size == 0) {
+         return "[]";
+        } else {
             String str = "[";
             int i = 0;
             for (i = 0; i < size - 1; i++) {
@@ -180,7 +180,7 @@ public class List {
             }
             str = str + list[i] + "]";
             return str;
-        // }
+        }
     }
     /*
      * Contains return true if the list has the item passed as an argument to
