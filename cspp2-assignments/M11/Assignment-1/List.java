@@ -76,7 +76,8 @@ public class List {
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -232,7 +233,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     true or false 
+     * @return     true or false
      */
     public boolean contains(final int item) {
         // Replace the code below
@@ -359,7 +360,7 @@ public class List {
      *
      * @return     true or false
      */
-    public boolean equals(final List newlist ) {
+    public boolean equals(final List newlist) {
         // Replace the code below
         // System.out.println(newlist);
         // int count=0;
@@ -387,12 +388,12 @@ public class List {
     * the simpler.
     */
     /**
-     * clears the list
+     * clears the list.
      */
     public void clear() {
         // write the logic for clear.
-        int list_length = list.length;
-        list = new int[list_length];
+        int listlength = list.length;
+        list = new int[listlength];
         size = 0;
 
     }
