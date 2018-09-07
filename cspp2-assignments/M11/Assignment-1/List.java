@@ -125,17 +125,13 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        System.out.println(index);
-        if(size==1) {
-            // list[0]=0;
-            size=0;
-        }
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             list[size] = 0;
             size--;
+            // System.out.println(Arrays.toString(list));
         } else {
             System.out.println("Invalid Position Exception");
         }
@@ -174,9 +170,9 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        if (size == 0) {
-         return "[]";
-        } else {
+        // if (size == 0) {
+        //  return "[]";
+        // } else {
             String str = "[";
             int i = 0;
             for (i = 0; i < size - 1; i++) {
@@ -184,7 +180,7 @@ public class List {
             }
             str = str + list[i] + "]";
             return str;
-        }
+        // }
     }
     /*
      * Contains return true if the list has the item passed as an argument to
@@ -228,9 +224,8 @@ public class List {
     public void removeAll(int[] newArray) {
         // write the logic
         int indexx;
-        int[] copied=list;
-        for (int i=0;i<newArray.length;i++) {
-            for (int j = 0; j < list.length; j++) {
+        for (int i=0;i<size;i++) {
+            for (int j = 0; j < newArray.length; j++) {
                 // if (contains(newArray[j])) {
                 //  int index = indexOf(newArray[j]);
                 //      if (index >= 0 && index < size) {
@@ -243,10 +238,10 @@ public class List {
                 //      System.out.println("Invalid Position Exception");
                 //      }
                 // }
-                indexx = indexOf(newArray[i]);
-                if (indexx >= 0 && indexx <= size) {
+                // j--;
+                indexx = indexOf(newArray[j]);
+                if (indexx >= 0 && indexx < size) {
                     remove(indexx);
-                    System.out.println(toString());
                 }
             }
 
