@@ -223,7 +223,7 @@ public class List {
     public void removeAll(int[] newArray) {
         // write the logic
         int indexx;
-        for (int i:list) {
+        for (int i=0;i<size;i++) {
             for (int j = 0; j < newArray.length; j++) {
                 // if (contains(newArray[j])) {
                 //  int index = indexOf(newArray[j]);
