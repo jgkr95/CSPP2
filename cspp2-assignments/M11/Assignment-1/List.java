@@ -125,8 +125,9 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
+        System.out.println(index);
         if(size==1) {
-            list[0]=0;
+            // list[0]=0;
             size=0;
         }
         if (index >= 0 && index < size) {
