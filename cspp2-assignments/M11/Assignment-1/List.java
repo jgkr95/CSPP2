@@ -222,21 +222,23 @@ public void addAll(int[] newArray) {
 public void removeAll(int[] newArray) {
 	// write the logic
 	int indexx;
-	for (int j = 0; j < newArray.length; j++) {
-		// if (contains(newArray[j])) {
-		// 	int index = indexOf(newArray[j]);
-		// 	    if (index >= 0 && index < size) {
-		// 			for (int i = index; i < size - 1; i++) {
-		// 				list[i] = list[i + 1];
-		// 			}
-		// 			list[size] = 0;
-		// 			size--;
-		// 		} else {
-		// 		System.out.println("Invalid Position Exception");
-		// 		}
-		// }
-		indexx = indexOf(newArray[j]);
-		remove(indexx);
+	for (int i=0;i<list.length;i++) {
+		for (int j = 0; j < newArray.length; j++) {
+			// if (contains(newArray[j])) {
+			// 	int index = indexOf(newArray[j]);
+			// 	    if (index >= 0 && index < size) {
+			// 			for (int i = index; i < size - 1; i++) {
+			// 				list[i] = list[i + 1];
+			// 			}
+			// 			list[size] = 0;
+			// 			size--;
+			// 		} else {
+			// 		System.out.println("Invalid Position Exception");
+			// 		}
+			// }
+			indexx = indexOf(newArray[j]);
+			remove(indexx);
+	}
 
 	}
 
