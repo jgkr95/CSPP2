@@ -129,6 +129,7 @@ public class List {
 			for (int i = index; i < size - 1; i++) {
 				list[i] = list[i + 1];
 			}
+			list[size]=0;
 			size--;
 		} else {
 			System.out.println("Invalid Position Exception");
@@ -256,7 +257,6 @@ public List subList(int start, int end) {
 			newlist.add(list[i]);	
 		}
 		return newlist;
-
 	} else {
 		System.out.println("Index Out of Bounds Exception");
 		return null;
