@@ -252,7 +252,7 @@ public List subList(int start, int end) {
 
 	if(start>=0 && end<=size) {
 		int j=0;
-		for (int i=start;i<end;i++) {
+		for (int i=start;i<=end;i++) {
 			newlist.list[j]=list[i];
 			j++;
 		}
