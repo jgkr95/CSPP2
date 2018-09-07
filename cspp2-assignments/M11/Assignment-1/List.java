@@ -82,7 +82,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length) {
             resize();
@@ -122,14 +122,14 @@ public class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size-1] = 0;
+            list[size - 1] = 0;
             size--;
             // System.out.println(Arrays.toString(list));
         } else {
@@ -146,7 +146,7 @@ public class List {
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
             return -1;
@@ -171,7 +171,7 @@ public class List {
     public String toString() {
         // Replace the code below
         if (size == 0) {
-         return "[]";
+            return "[]";
         } else {
             String str = "[";
             int i = 0;
@@ -187,7 +187,7 @@ public class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
     }
@@ -195,7 +195,7 @@ public class List {
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -207,7 +207,7 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list
     */
-    public void addAll(int[] newArray) {
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             if (size == list.length) {
@@ -221,10 +221,10 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-    public void removeAll(int[] newArray) {
+    public void removeAll(final int[] newArray) {
         // write the logic
         int indexx;
-        for (int i=0;i<size;i++) {
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < newArray.length; j++) {
                 // if (contains(newArray[j])) {
                 //  int index = indexOf(newArray[j]);
@@ -256,11 +256,11 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) {
+    public List subList(final int start, final int end) {
         // write the logic for subList
         // int[] newlist=new int[end-start];
         List newlist = new List();
-        if(size==0||start<0||start>size||end>size) {
+        if (size == 0 || start < 0 || start > size || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
@@ -280,7 +280,7 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List newlist ) {
+    public boolean equals(final List newlist ) {
         // Replace the code below
         // System.out.println(newlist);
         // int count=0;
@@ -380,18 +380,20 @@ public class List {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
-                    for (int i = 0; i < t2.length; i++)
+                    for (int i = 0; i < t2.length; i++) {
                         a[i] = Integer.parseInt(t2[i]);
+                    }
                     l.removeAll(a);
                 }
                 break;
             case "subList": {
-                if (tokens.length != 2) break;
+                if (tokens.length != 2)  { break; }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
