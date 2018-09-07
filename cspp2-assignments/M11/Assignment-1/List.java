@@ -168,9 +168,9 @@ public class List {
  */
 public String toString() {
 	// Replace the code below
-	if (size == 0) {
-		return "[]";
-	}
+	// if (size == 0) {
+	// 	return "[]";
+	// }
 	String str = "[";
 	int i = 0;
 	for (i = 0; i < size - 1; i++) {
@@ -252,10 +252,10 @@ public List subList(int start, int end) {
 
 	if(start>=0 && end<=size) {
 		int j=0;
-			for (int i=start;i<end;i++) {
-				newlist.list[j]=list[i];
-				j++;
-			}
+		for (int i=start;i<end;i++) {
+			newlist.list[j]=list[i];
+			j++;
+		}
 	} else {
 		System.out.println("Index Out of Bounds Exception");
 	}
