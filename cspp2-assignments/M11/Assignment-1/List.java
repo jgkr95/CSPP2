@@ -223,12 +223,16 @@ public void removeAll(int[] newArray) {
 	for (int j = 0; j < newArray.length; j++) {
 		if (contains(newArray[j])) {
 			int index = indexOf(newArray[j]);
-			remove(index);
-		} 
-		// else {
-		// 	System.out.println("Invalid Position Exception");
-		// }
-		
+			    if (index >= 0 && index < size) {
+					for (int i = index; i < size - 1; i++) {
+						list[i] = list[i + 1];
+					}
+					list[size] = 0;
+					size--;
+				} else {
+			System.out.println("Invalid Position Exception");
+		}
+		}
 
 	}
 
@@ -253,9 +257,7 @@ public List subList(int start, int end) {
 		}
 		return newlist;
 
-	} 
-	// return newlist;
-	else {
+	} else {
 		System.out.println("Index Out of Bounds Exception");
 		return null;
 	}
