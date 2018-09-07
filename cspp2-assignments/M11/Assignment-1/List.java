@@ -251,10 +251,9 @@ public List subList(int start, int end) {
 	List newlist=new List();
 
 	if(start>=0 && end<=size) {
-		int j=0;
-		for (int i=start;i<=end;i++) {
-			newlist.list[j]=list[i];
-			j++;
+		// int j=0;
+		for (int i=start;i<end;i++) {
+			newlist.add(list[i]);	
 		}
 	} else {
 		System.out.println("Index Out of Bounds Exception");
