@@ -162,7 +162,13 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return !(indexOf(item) == -1);
+        // return indexOf(item) == -1;
+        for (int i=0;i<list.length;i++) {
+            if(item.equals(list[i])) {
+                return true;
+            }
+        }
+        return false;
 
     }
     /*
