@@ -237,7 +237,7 @@ public class List {
                 //      }
                 // }
                 indexx = indexOf(newArray[j]);
-                if (indexx >= 0 && indexx < size) {
+                if (indexx > 0 && indexx < size) {
                     remove(indexx);
                 }
             }
@@ -257,7 +257,10 @@ public class List {
         // write the logic for subList
         // int[] newlist=new int[end-start];
         List newlist = new List();
-
+        if(size==0||start<0||start>size||end>size) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
         if (start >= 0 && end <= size) {
             // int j=0;
             for (int i = start; i < end; i++) {
