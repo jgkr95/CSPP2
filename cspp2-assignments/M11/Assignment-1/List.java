@@ -131,7 +131,7 @@ public class List {
             }
             list[size-1] = 0;
             size--;
-            System.out.println(Arrays.toString(list));
+            // System.out.println(Arrays.toString(list));
         } else {
             System.out.println("Invalid Position Exception");
         }
