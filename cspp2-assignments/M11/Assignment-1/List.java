@@ -255,11 +255,13 @@ public List subList(int start, int end) {
 		for (int i=start;i<end;i++) {
 			newlist.add(list[i]);	
 		}
+		return newlist;
+
 	} else {
 		System.out.println("Index Out of Bounds Exception");
+		return null;
 	}
-	return newlist;
-
+	
 }
 /*
 Returns a boolean indicating whether the parameter i.e a List object is
