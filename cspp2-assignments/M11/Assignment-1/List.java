@@ -257,10 +257,10 @@ public class List {
         // write the logic for subList
         // int[] newlist=new int[end-start];
         List newlist = new List();
-        if(size==0||start<0||start>size||end>size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
-        }
+        // if(size==0||start<0||start>size||end>size) {
+        //     System.out.println("Index Out of Bounds Exception");
+        //     return null;
+        // }
         if (start >= 0 && end <= size) {
             // int j=0;
             for (int i = start; i < end; i++) {
