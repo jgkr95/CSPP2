@@ -224,8 +224,8 @@ public class List {
         // write the logic
         int indexx;
         int[] copied=list;
-        for (int i=0;i<copied.length;i++) {
-            for (int j = 0; j < newArray.length; j++) {
+        for (int i=0;i<newArray.length;i++) {
+            for (int j = 0; j < list.length; j++) {
                 // if (contains(newArray[j])) {
                 //  int index = indexOf(newArray[j]);
                 //      if (index >= 0 && index < size) {
