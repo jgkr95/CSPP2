@@ -238,7 +238,7 @@ public class List {
                 //      System.out.println("Invalid Position Exception");
                 //      }
                 // }
-                indexx = indexOf(newArray[j]);
+                indexx = indexOf(newArray[i]);
                 if (indexx >= 0 && indexx <= size) {
                     remove(indexx);
                     System.out.println(toString());
