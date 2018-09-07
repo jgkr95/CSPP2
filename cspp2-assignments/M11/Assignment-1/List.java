@@ -268,7 +268,7 @@ exactly matching with the given list or not.
 */
 public boolean equals(List newlist ) {
 	// Replace the code below
-	System.out.println(newlist);
+	// System.out.println(newlist);
 	if(Arrays.equals(newlist.list,list)) {
 		return true;
 	} else {
