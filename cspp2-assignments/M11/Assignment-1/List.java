@@ -277,11 +277,27 @@ public class List {
     public boolean equals(List newlist ) {
         // Replace the code below
         // System.out.println(newlist);
-        if (Arrays.equals(newlist.list, list)) {
-            return true;
-        } else {
+        int count=0;
+        if(newlist.list.length!=list.length) {
             return false;
+        } else {
+            for(int i=0;i<size;i++) {
+                for(int j=0;j<newlist.list.length;j++) {
+                    if(newlist.list[j]==(list[i])) {
+                        count++;
+                    }
+                }
+            }
+            if(count==size){
+                return true;
+            }
+            return true;
         }
+        // if (Arrays.equals(newlist.list, list)) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
 
     }
     /*
