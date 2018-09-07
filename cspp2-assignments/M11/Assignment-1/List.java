@@ -254,11 +254,11 @@ public List subList(int start, int end) {
 		return newlist;
 
 	} 
-	return newlist;
-	// // else {
-	// 	System.out.println("Index Out of Bounds Exception");
-	// 	return null;
-	// }
+	// return newlist;
+	else {
+		System.out.println("Index Out of Bounds Exception");
+		return null;
+	}
 	
 }
 /*
