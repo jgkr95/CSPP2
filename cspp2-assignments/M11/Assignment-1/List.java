@@ -237,7 +237,7 @@ public void removeAll(int[] newArray) {
 			// 		}
 			// }
 			indexx = indexOf(newArray[j]);
-			if(indexx>0 && indexx<size) {
+			if(indexx>=0 && indexx<size) {
 				remove(indexx);
 			}
 	}
