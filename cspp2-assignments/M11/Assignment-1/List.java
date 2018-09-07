@@ -223,16 +223,11 @@ public void removeAll(int[] newArray) {
 	for (int j = 0; j < newArray.length; j++) {
 		if (contains(newArray[j])) {
 			int index = indexOf(newArray[j]);
-			    if (index >= 0 && index < size) {
-					for (int i = index; i < size - 1; i++) {
-						list[i] = list[i + 1];
-					}
-					list[size] = 0;
-					size--;
-				} else {
+			remove(index);
+		} else {
 			System.out.println("Invalid Position Exception");
 		}
-		}
+		
 
 	}
 
