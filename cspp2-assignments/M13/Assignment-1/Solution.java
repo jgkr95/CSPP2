@@ -60,7 +60,7 @@ class Set {
 		Set newobject = new Set();
 		for (int i = 0; i <= size; i++) {
 			for (int j = 0; j < s.set.length; j++) {
-				if (s.set[i] == (set[i])) {
+				if (s.set[i] == set[i]) {
 					newobject.add(set[i]);
 				}
 
