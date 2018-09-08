@@ -34,7 +34,7 @@ class Set {
     }
     public String toString() {
     	String str="{";
-    	for (int i=0;i<set.length;i++) {
+    	for (int i=0;i<size;i++) {
     		str+=set[i];
     		if(i<size-1) {
     			str+=",";
