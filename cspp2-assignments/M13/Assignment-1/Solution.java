@@ -90,11 +90,11 @@ class Set {
 		// System.out.println(Arrays.toString(set)+" vs "+Arrays.toString(t.set));
 		int k=0;
 		for (int i = 0; i < si; i++) {
-			for (int j = 0; j < t.size; j++) {
+			for (int j = 0; j < t.size; j++,k++) {
 				// System.out.println(i+"vs"+j);
 				// System.out.println("values "+set[i]+" "+t.set[j]);
-				cp[i][0] = set[i];
-				cp[i][1] = t.set[j];
+				cp[k][0] = set[i];
+				cp[k][1] = t.set[j];
 				k++;
 				// System.out.println(cp[i][0]+" "+cp[i][1]);
 			}
