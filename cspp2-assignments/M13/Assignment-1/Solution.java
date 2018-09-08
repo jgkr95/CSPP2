@@ -82,14 +82,14 @@ class Set {
 	}
 	public int[][] cartesianProduct(Set t) {
 		int si= size*t.size;
-		System.out.println(size+"*"+t.size+"="+si);
+		// System.out.println(size+"*"+t.size+"="+si);
 		int[][] cp = new int[si][2];
 		if (size == 0||t.size==0) {
 			return null;
 		}
 		// System.out.println(Arrays.toString(set)+" vs "+Arrays.toString(t.set));
-		int k=0;
-		for (int i = 0; i < si; i++) {
+		
+		for (int i = 0,k=0; i < si; i++) {
 			for (int j = 0; j < t.size; j++,k++) {
 				// System.out.println(i+"vs"+j);
 				// System.out.println("values "+set[i]+" "+t.set[j]);
