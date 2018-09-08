@@ -56,11 +56,11 @@ class Set {
 			add(newset[i]);
 		}
 	}
-	public Set intersection(Set s) {
+	public Set intersection(Set t) {
 		Set newobject = new Set();
 		for (int i = 0; i <= size; i++) {
-			for (int j = 0; j < s.set.length; j++) {
-				if (s.set[i] == set[i]) {
+			for (int j = 0; j < t.size; j++) {
+				if (t.set[j] == set[i]) {
 					newobject.add(set[i]);
 				}
 
