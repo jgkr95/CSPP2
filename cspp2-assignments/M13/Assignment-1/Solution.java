@@ -8,7 +8,13 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+    * size integer varibale.
+    */
     private int size;
+    /**
+     * { set integer array }
+     */
     private int[] set;
     /**
      * Constructs the object.
