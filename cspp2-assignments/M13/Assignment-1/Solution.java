@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author :
  */
 class Set {
 	//your code goes here...
@@ -18,13 +17,28 @@ class Set {
 		size = 0;
 		set = new int[20];
 	}
+	/**
+	 * { gives size }.
+	 *
+	 * @return     { integer value is returned }
+	 */
 	public int size() {
 		return size;
 	}
+	/**
+	 * { reisez the set }.
+	 */
 	public void resize() {
 		set = Arrays.copyOf(set, 2 * size);
 	}
-	public boolean contains(int item) {
+	/**
+	 * { gives whether item present in set or not }.
+	 *
+	 * @param      item  The item is of integer type.
+	 *
+	 * @return     { true or false depending on whether present or not }
+	 */
+	public boolean contains(final int item) {
 		for (int i = 0; i < set.length; i++) {
 			if (item == (set[i])) {
 				return true;
@@ -32,6 +46,11 @@ class Set {
 		}
 		return false;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String str = "{";
 		for (int i = 0; i < size; i++) {
@@ -43,7 +62,12 @@ class Set {
 		str += "}";
 		return str;
 	}
-	public void add(int item) {
+	/**
+	 * { adds the element to the set }.
+	 *
+	 * @param      item  The item is of integer type
+	 */
+	public void add(final int item) {
 		if (size == set.length) {
 			resize();
 		}
@@ -51,11 +75,23 @@ class Set {
 			set[size++] = item;
 		}
 	}
-	public void add(int[] newset) {
+	/**
+	 * { adds the array of ellements }.
+	 *
+	 * @param      newset  The newset is of array integer type
+	 */
+	public void add(final int[] newset) {
 		for (int i = 0; i < newset.length; i++) {
 			add(newset[i]);
 		}
 	}
+	/**
+	 * { Gives the common elements }.
+	 *
+	 * @param      t     { t is claas object }
+	 *
+	 * @return     { class Set object is returned }
+	 */
 	public Set intersection(Set t) {
 		Set newobject = new Set();
 		for (int i = 0; i <= size; i++) {
@@ -68,7 +104,14 @@ class Set {
 		}
 		return newobject;
 	}
-	public Set retainAll(int[] s) {
+	/**
+	 * { Gives the elements present in set array if they are in given array }.
+	 *
+	 * @param      s     { s is of integer array tyep }
+	 *
+	 * @return     { class object is returned }
+	 */
+	public Set retainAll(final int[] s) {
 		Set newobj = new Set();
 		for (int i = 0; i < set.length; i++) {
 			for (int j = 0; j < s.length; j++) {
@@ -80,6 +123,13 @@ class Set {
 		}
 		return newobj;
 	}
+	/**
+	 * { Gives the cartesian prouct of the sets }.
+	 *
+	 * @param      t     { t is class object }
+	 *
+	 * @return     { integer array is returned }
+	 */
 	public int[][] cartesianProduct(Set t) {
 		int si = size * t.size;
 		int[][] cp = new int[si][2];
