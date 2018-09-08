@@ -81,16 +81,27 @@ class Set {
 		return newobj;
 	}
 	public int[][] cartesianProduct(Set t) {
-		int[][] cp = new int[size() * t.size()][2];
-		if (size == 0) {
+		int si= size*t.size;
+		System.out.println(size+"*"+t.size+"="+si);
+		int[][] cp = new int[si][2];
+		if (size == 0||t.size==0) {
 			return null;
 		}
-		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < t.size(); j++) {
+		// System.out.println(Arrays.toString(set)+" vs "+Arrays.toString(t.set));
+		int k=0;
+		for (int i = 0; i < si; i++) {
+			for (int j = 0; j < t.size; j++) {
+				// System.out.println(i+"vs"+j);
+				// System.out.println("values "+set[i]+" "+t.set[j]);
 				cp[i][0] = set[i];
 				cp[i][1] = t.set[j];
+				k++;
+				// System.out.println(cp[i][0]+" "+cp[i][1]);
 			}
+			
 		}
+		int[][] a={{1,2},{3,4},{4,5},{5,6}};
+		// System.out.println(Arrays.deepToString(a));
 		return cp;
 	}
 }
