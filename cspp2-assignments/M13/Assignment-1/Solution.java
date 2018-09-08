@@ -81,14 +81,14 @@ class Set {
 		return newobj;
 	}
 	public int[][] cartesianProduct(Set t) {
-		int[][] cp=new int[size()*t.size()][2];
-		if(size==0) {
+		int[][] cp = new int[size() * t.size()][2];
+		if (size == 0) {
 			return null;
 		}
-		for(int i=0;i<size;i++) {
-			for (int j=0;j<t.size();j++) {
-				cp[i][0]=set[i];
-				cp[i][1]=t.set[j];
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < t.size(); j++) {
+				cp[i][0] = set[i];
+				cp[i][1] = t.set[j];
 			}
 		}
 		return cp;
