@@ -13,7 +13,7 @@ class Set {
     */
     private int size;
     /**
-     * { set integer array }
+     * { set integer array }.
      */
     private int[] set;
     /**
@@ -21,7 +21,8 @@ class Set {
      */
     Set() {
         size = 0;
-        set = new int[20];
+        final int twenty = 20;
+        set = new int[twenty];
     }
     /**
      * { gives size }.
@@ -98,7 +99,7 @@ class Set {
      *
      * @return     { class Set object is returned }
      */
-    public Set intersection(Set t) {
+    public Set intersection(final Set t) {
         Set newobject = new Set();
         for (int i = 0; i <= size; i++) {
             for (int j = 0; j < t.size; j++) {
