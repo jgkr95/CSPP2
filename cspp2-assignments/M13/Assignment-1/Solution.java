@@ -181,7 +181,7 @@ public final class Solution {
 				s.add(intArray);
 				intArray = intArray(tokens[2]);
 				t.add(intArray);
-				// System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+				System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
 				break;
 			default:
 				break;
