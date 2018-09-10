@@ -180,7 +180,7 @@ class Set {
      *
      * @return     { returns element }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // System.out.print("gghguhuy ");
         // System.out.println(toString());
         if (index < size()) {
@@ -194,8 +194,6 @@ class Set {
  * Class for sorted set.
  */
 class SortedSet extends Set {
-
- 
     /**
      * { Gives elements starting from given element to less than to element }.
      *
@@ -204,12 +202,13 @@ class SortedSet extends Set {
      *
      * @return     { subset of set }
      */
-    public int[] subSet(int from, int to) {
+    public int[] subSet(final int from, final int to) {
         if (from > to) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
-        int[] subset = new int[10];
+        final int ten=10;
+        int[] subset = new int[ten];
         int j = 0;
         // System.out.println("size "+size());
         for (int i = 0; i < size(); i++) {
@@ -235,7 +234,7 @@ class SortedSet extends Set {
      *
      * @return     { headset is integer array }
      */
-    public int[] headSet(int to) {
+    public int[] headSet(final int to) {
         int[] headset = new int[10];
         int i = 0, j = 0;
         while (i < size()) {
@@ -265,7 +264,7 @@ class SortedSet extends Set {
      *
      * @param      arr   The arr is integer array
      */
-    public void addAll(int[] arr) {
+    public void addAll(final int[] arr) {
         Arrays.sort(arr);
         for (int j = 0; j < arr.length; j++) {
             if (!contains(arr[j])) {
