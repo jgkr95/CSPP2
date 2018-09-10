@@ -333,7 +333,7 @@ public final class Solution {
 				    Arrays.deepToString(s.cartesianProduct(t)));
 				break;
 			case "subSet":
-				se = new SortedSet();
+				// se = new SortedSet();
 				int[] arr = intArray(tokens[1]);
 				// System.out.println(arr[0]+"  "+arr[1]);
 				int[] subset=se.subSet(arr[0], arr[1]);
@@ -345,7 +345,7 @@ public final class Solution {
 				System.out.println(temp);
 				break;
 			case "headSet":
-				se = new SortedSet();
+				// se = new SortedSet();
 				subset=se.headSet(Integer.parseInt(tokens[1]));
 				Set temp1= new Set();
 				for(int i=0;i<subset.length;i++) {
