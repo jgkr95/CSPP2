@@ -157,6 +157,7 @@ class Set {
 	}
 
 	public int get(int index) {
+		System.out.println(toString());
 		if (index < size()) {
 			System.out.println(set[index]);
 			return set[index];
