@@ -309,7 +309,8 @@ public final class Solution {
 				break;
 			case "subSet":
 				se = new SortedSet();
-				System.out.println(se.subSet(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2])));
+				int[] arr = intArray(tokens[1]);
+				System.out.println(se.subSet(arr[0], arr[1]));
 				break;
 			case "headSet":
 				se = new SortedSet();
