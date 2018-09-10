@@ -82,6 +82,12 @@ class Set {
             set[size++] = item;
         }
     }
+    /**
+     * { inserts element at given position }.
+     *
+     * @param      index  The index is of integer type
+     * @param      item   The item is of integer type
+     */
     public void add(final int index, final int item) {
         // write the logic
         try {
@@ -167,7 +173,13 @@ class Set {
         }
         return cp;
     }
-
+    /**
+     * { Gives element present at the given index }.
+     *
+     * @param      index  The index is integer tyepe
+     *
+     * @return     { returns element }
+     */
     public int get(int index) {
         // System.out.print("gghguhuy ");
         // System.out.println(toString());
@@ -371,7 +383,8 @@ public final class Solution {
                 // System.out.println(arr[0]+"  "+arr[1]);
                 int[] subset = se.subSet(arr[0], arr[1]);
                 if (subset != null) {
-                    System.out.println(Arrays.toString(subset).replace("[", "{").replace("]", "}"));
+                    System.out.println(
+                    Arrays.toString(subset).replace("[", "{").replace("]", "}"));
                 }
                 // Set temp= new Set();
                 // // System.out.println(Arrays.toString(subset));
