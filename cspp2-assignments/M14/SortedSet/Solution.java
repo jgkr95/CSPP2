@@ -355,11 +355,11 @@ public final class Solution {
 				System.out.println(temp1);
 				break;
 			case "last":
-				se = new SortedSet();
+				// se = new SortedSet();
 				System.out.println(se.last());
 				break;
 			case "addAll":
-				se = new SortedSet();
+				// se = new SortedSet();
 				intArray = intArray(tokens[1]);
 				se.addAll(intArray);
 				break;
