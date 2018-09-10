@@ -79,20 +79,13 @@ class Set {
 			resize();
 		}
 		if (!contains(item)) {
-			int size1=size;
-			for(int i=0;i<size;i++) {
-				if(item<=set[i]) {
-					add(i,item);
-				}
-			}
-			if(size1==size) {
-				add(item);
-			}
 			set[size++] = item;
+			}
+			// set[size++] = item;
 			// System.out.println(toString());
 			// Arrays.sort(set);
 			// System.out.println(toString());
-		}
+		
 	}
     public void add(final int index, final int item) {
     // write the logic
