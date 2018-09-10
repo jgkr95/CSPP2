@@ -82,7 +82,7 @@ class Set {
 			set[size++] = item;
 			// System.out.println(toString());
 			Arrays.sort(set);
-			System.out.println(toString());
+			// System.out.println(toString());
 		}
 	}
 	/**
