@@ -346,10 +346,11 @@ public final class Solution {
 				break;
 			case "headSet":
 				// se = new SortedSet();
-				subset=se.headSet(Integer.parseInt(tokens[1]));
+				int[] sub=se.headSet(Integer.parseInt(tokens[1]));
+				// subset=se.headSet(Integer.parseInt(tokens[1]));
 				Set temp1= new Set();
-				for(int i=0;i<subset.length;i++) {
-					temp1.add(subset[i]);
+				for(int i=0;i<sub.length;i++) {
+					temp1.add(sub[i]);
 				}
 				System.out.println(temp1);
 				break;
