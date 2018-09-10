@@ -191,6 +191,7 @@ class SortedSet extends Set {
 				headset[j] = get(i);
 				j++;
 			}
+			i++;
 		}
 		
 		return headset;
