@@ -178,13 +178,20 @@ class Set {
         return -1;
     }
 }
-
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
 
-    //public SortedSet(int[] arr) {
-    //intArray=arr;
-    //}
-
+ 
+    /**
+     * { Gives elements starting from given element to less than to element }.
+     *
+     * @param      from  The from is of integer type
+     * @param      to    { to is of intger type }
+     *
+     * @return     { subset of set }
+     */
     public int[] subSet(int from, int to) {
         if (from > to) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -209,6 +216,13 @@ class SortedSet extends Set {
 
         return arr;
     }
+    /**
+     * { gives set elements less than given element }.
+     *
+     * @param      to    { is of intger type }
+     *
+     * @return     { headset is integer array }
+     */
     public int[] headSet(int to) {
         int[] headset = new int[10];
         int i = 0, j = 0;
@@ -222,6 +236,11 @@ class SortedSet extends Set {
 
         return headset;
     }
+    /**
+     * { returns the last element of the set array }.
+     *
+     * @return     { largest element is returned }
+     */
     public int last() {
         if (size() == 0) {
             System.out.println("Set Empty Exception");
@@ -229,6 +248,11 @@ class SortedSet extends Set {
         }
         return get(size() - 1);
     }
+    /**
+     * Adds all.
+     *
+     * @param      arr   The arr is integer array
+     */
     public void addAll(int[] arr) {
         Arrays.sort(arr);
         for (int j = 0; j < arr.length; j++) {
