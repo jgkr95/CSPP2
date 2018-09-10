@@ -181,10 +181,14 @@ class SortedSet extends Set {
 	}
 	public int[] headSet(int to) {
 		int[] headset = new int[10];
-		for (int i = 0, j = 0; get(i) < to && i<size() ; i++) {
-			headset[j] = get(i);
-			j++;
+		int i=0,j=0;
+		while(i<size()) {
+			if(get(i)<to) {
+				headset[j] = get(i);
+				j++;
+			}
 		}
+		
 		return headset;
 	}
 	public int last() {
