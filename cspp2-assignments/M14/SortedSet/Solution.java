@@ -80,20 +80,20 @@ class Set {
 		}
 		if (!contains(item)) {
 			set[size++] = item;
-			}
+		}
 	}
-    public void add(final int index, final int item) {
-    // write the logic
-    try {
-        if(!contains(item)) {
-        for (int i = size; i >= index; i--) {
-            set[i + 1] = set[i];
-        }
-        set[index] = item;
-        size++;
-    }
-    } catch (Exception e) {
-    }
+	public void add(final int index, final int item) {
+		// write the logic
+		try {
+			if (!contains(item)) {
+				for (int i = size; i >= index; i--) {
+					set[i + 1] = set[i];
+				}
+				set[index] = item;
+				size++;
+			}
+		} catch (Exception e) {
+		}
 	}
 	/**
 	 * { adds the array of ellements }.
@@ -186,12 +186,12 @@ class SortedSet extends Set {
 	//}
 
 	public int[] subSet(int from, int to) {
-		if(from>to) {
+		if (from > to) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
 		}
 		int[] subset = new int[10];
-		int j=0;
+		int j = 0;
 		// System.out.println("size "+size());
 		for (int i = 0; i < size(); i++) {
 			// System.out.println("here " + get(i));
@@ -201,29 +201,29 @@ class SortedSet extends Set {
 				j++;
 			}
 		}
-		int[] arr=new int[j];
-		for(int i=0;i<j;i++) {
-			arr[i]=subset[i];
+		int[] arr = new int[j];
+		for (int i = 0; i < j; i++) {
+			arr[i] = subset[i];
 		}
 
-		
+
 		return arr;
 	}
 	public int[] headSet(int to) {
 		int[] headset = new int[10];
-		int i=0,j=0;
-		while(i<size()) {
-			if(get(i)<to) {
+		int i = 0, j = 0;
+		while (i < size()) {
+			if (get(i) < to) {
 				headset[j] = get(i);
 				j++;
 			}
 			i++;
 		}
-		
+
 		return headset;
 	}
 	public int last() {
-		if(size()==0) {
+		if (size() == 0) {
 			System.out.println("Set Empty Exception");
 			return -1;
 		}
@@ -240,15 +240,15 @@ class SortedSet extends Set {
 			// add(arr[i]);
 			// }
 			if (!contains(arr[j])) {
-			int size1=size();
-			for(int i=0;i<size();i++) {
-				if(arr[j]<=get(i)) {
-					add(i,arr[j]);
+				int size1 = size();
+				for (int i = 0; i < size(); i++) {
+					if (arr[j] <= get(i)) {
+						add(i, arr[j]);
+					}
 				}
-			}
-			if(size1==size()) {
-				add(arr[j]);
-			}
+				if (size1 == size()) {
+					add(arr[j]);
+				}
 			}
 		}
 	}
@@ -352,9 +352,9 @@ public final class Solution {
 				// se = new SortedSet();
 				int[] arr = intArray(tokens[1]);
 				// System.out.println(arr[0]+"  "+arr[1]);
-				int[] subset=se.subSet(arr[0], arr[1]);
-				if(subset!=null) {
-					System.out.println(Arrays.toString(subset).replace("[","{").replace("]","}"));
+				int[] subset = se.subSet(arr[0], arr[1]);
+				if (subset != null) {
+					System.out.println(Arrays.toString(subset).replace("[", "{").replace("]", "}"));
 				}
 				// Set temp= new Set();
 				// // System.out.println(Arrays.toString(subset));
@@ -367,10 +367,10 @@ public final class Solution {
 				break;
 			case "headSet":
 				// se = new SortedSet();
-				int[] sub=se.headSet(Integer.parseInt(tokens[1]));
+				int[] sub = se.headSet(Integer.parseInt(tokens[1]));
 				// subset=se.headSet(Integer.parseInt(tokens[1]));
-				Set temp1= new Set();
-				for(int i=0;i<sub.length;i++) {
+				Set temp1 = new Set();
+				for (int i = 0; i < sub.length; i++) {
 					temp1.add(sub[i]);
 				}
 
