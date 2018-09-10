@@ -209,7 +209,7 @@ class SortedSet extends Set {
 		int[] newarr = new int[10];
 		newarr = sort(arr);
 		for (int i = 0; i < newarr.length; i++) {
-			super.add(arr[i]);
+			add(arr[i]);
 		}
 	}
 	public int[] sort(int[] arr) {
