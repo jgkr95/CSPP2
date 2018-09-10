@@ -160,7 +160,7 @@ class Set {
 		// System.out.print("gghguhuy ");
 		// System.out.println(toString());
 		if (index < size()) {
-			System.out.println(set[index]);
+			// System.out.println(set[index]);
 			return set[index];
 		}
 		return -1;
