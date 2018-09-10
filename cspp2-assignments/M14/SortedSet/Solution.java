@@ -157,8 +157,8 @@ class Set {
 	}
 
 	public int get(int index) {
-		System.out.print("gghguhuy ");
-		System.out.println(toString());
+		// System.out.print("gghguhuy ");
+		// System.out.println(toString());
 		if (index < size()) {
 			System.out.println(set[index]);
 			return set[index];
@@ -219,9 +219,9 @@ class SortedSet extends Set {
 			// System.out.println(arr[i]);
 			add(arr[i]);
 		}
-		System.out.println(super.toString());
-		System.out.println(super.size());
-		System.out.println(size());
+		// System.out.println(super.toString());
+		// System.out.println(super.size());
+		// System.out.println(size());
 	}
 	// public int[] sort(int[] arr) {
 	// 	int temp;
