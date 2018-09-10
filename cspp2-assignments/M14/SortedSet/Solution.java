@@ -343,7 +343,9 @@ public final class Solution {
 				for(int i=0;i<subset.length;i++) {
 					temp.add(subset[i]);
 				}
-				System.out.println(temp);
+				if(temp.size()>0) {
+					System.out.println(temp);
+				}
 				break;
 			case "headSet":
 				// se = new SortedSet();
@@ -353,6 +355,7 @@ public final class Solution {
 				for(int i=0;i<sub.length;i++) {
 					temp1.add(sub[i]);
 				}
+
 				System.out.println(temp1);
 				break;
 			case "last":
