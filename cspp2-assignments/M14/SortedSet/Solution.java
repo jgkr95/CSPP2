@@ -90,14 +90,15 @@ class Set {
     public void add(final int index, final int item) {
     // write the logic
     try {
-        int[] newlist = new int[set.length];
+        // int[] newlist = new int[set.length];
+        if(!contains(item)) {
         for (int i = size; i >= index; i--) {
             set[i + 1] = set[i];
         }
         set[index] = item;
         size++;
+    }
     } catch (Exception e) {
-        System.out.println("Negative Index Exception");
     }
 	}
 	/**
