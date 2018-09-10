@@ -79,15 +79,8 @@ class Set {
 			resize();
 		}
 		if (!contains(item)) {
-			int size1=size;
-			// for(int i=0;i<size;i++) {
-			// 	if(item<=set[i]) {
-			// 		add()
-			// 	}
-			// }
 			set[size++] = item;
-			Arrays.sort(set);
-	// System.out.println(toString());
+			// System.out.println(toString());
 		}
 	}
 	/**
@@ -229,7 +222,6 @@ class SortedSet extends Set {
 		// System.out.println(Arrays.toString(arr));
 		Arrays.sort(arr);
 		// System.out.println(Arrays.toString(arr));
-		System.out.println(Arrays.toString(arr));
 		for (int i = 0; i < arr.length; i++) {
 			// System.out.println(arr[i]);
 			if (!contains(arr[i])) {
