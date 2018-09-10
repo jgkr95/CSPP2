@@ -79,7 +79,7 @@ class Set {
 			resize();
 		}
 		if (!contains(item)) {
-			// int size1=size;
+			int size1=size;
 			// for(int i=0;i<size;i++) {
 			// 	if(item<=set[i]) {
 			// 		add()
