@@ -207,6 +207,7 @@ class SortedSet extends Set {
 	public void addAll(int[] arr) {
 		// int min=arr[0];
 		int[] newarr = new int[10];
+		System.out.println(Arrays.toString(arr));
 		newarr = sort(arr);
 		for (int i = 0; i < newarr.length; i++) {
 			add(arr[i]);
