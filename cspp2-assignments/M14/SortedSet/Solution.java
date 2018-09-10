@@ -81,6 +81,8 @@ class Set {
 		if (!contains(item)) {
 			set[size++] = item;
 			// System.out.println(toString());
+			Arrays.sort(set);
+			System.out.println(toString());
 		}
 	}
 	/**
