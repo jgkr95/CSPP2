@@ -81,16 +81,10 @@ class Set {
 		if (!contains(item)) {
 			set[size++] = item;
 			}
-			// set[size++] = item;
-			// System.out.println(toString());
-			// Arrays.sort(set);
-			// System.out.println(toString());
-		
 	}
     public void add(final int index, final int item) {
     // write the logic
     try {
-        // int[] newlist = new int[set.length];
         if(!contains(item)) {
         for (int i = size; i >= index; i--) {
             set[i + 1] = set[i];
@@ -255,25 +249,9 @@ class SortedSet extends Set {
 			if(size1==size()) {
 				add(arr[j]);
 			}
+			}
 		}
-		}
-		// System.out.println(super.toString());
-		// System.out.println(super.size());
-		// System.out.println(size());
 	}
-	// public int[] sort(int[] arr) {
-	// 	int temp;
-	// 	for (int i = 0; i < arr.length; i++) {
-	// 		for (int j = i + 1; j < arr.length; j++) {
-	// 			if (arr[i] > arr[j]) {
-	// 				temp = arr[j];
-	// 				arr[i] = arr[j];
-	// 				arr[j] = arr[i];
-	// 			}
-	// 		}
-	// 	}
-	// 	return arr;
-	// }
 }
 
 /**
