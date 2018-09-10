@@ -338,14 +338,17 @@ public final class Solution {
 				int[] arr = intArray(tokens[1]);
 				// System.out.println(arr[0]+"  "+arr[1]);
 				int[] subset=se.subSet(arr[0], arr[1]);
-				Set temp= new Set();
-				// System.out.println(Arrays.toString(subset));
-				for(int i=0;i<subset.length;i++) {
-					temp.add(subset[i]);
+				if(subset!=null) {
+					System.out.println(Arrays.toString(subset).replace("[ ","{").replace("]","}"));
 				}
-				if(temp.size()>0) {
-					System.out.println(temp);
-				}
+				// Set temp= new Set();
+				// // System.out.println(Arrays.toString(subset));
+				// for(int i=0;i<subset.length;i++) {
+				// 	temp.add(subset[i]);
+				// }
+				// if(temp.size()>0) {
+				// 	System.out.println(temp);
+				// }
 				break;
 			case "headSet":
 				// se = new SortedSet();
