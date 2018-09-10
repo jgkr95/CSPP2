@@ -80,6 +80,7 @@ class Set {
 		}
 		if (!contains(item)) {
 			set[size++] = item;
+			System.out.println(toString());
 		}
 	}
 	/**
@@ -206,26 +207,27 @@ class SortedSet extends Set {
 	}
 	public void addAll(int[] arr) {
 		// int min=arr[0];
-		int[] newarr = new int[10];
 		System.out.println(Arrays.toString(arr));
-		newarr = sort(arr);
-		for (int i = 0; i < newarr.length; i++) {
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
 			add(arr[i]);
 		}
 	}
-	public int[] sort(int[] arr) {
-		int temp;
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					temp = arr[j];
-					arr[i] = arr[j];
-					arr[j] = arr[i];
-				}
-			}
-		}
-		return arr;
-	}
+	// public int[] sort(int[] arr) {
+	// 	int temp;
+	// 	for (int i = 0; i < arr.length; i++) {
+	// 		for (int j = i + 1; j < arr.length; j++) {
+	// 			if (arr[i] > arr[j]) {
+	// 				temp = arr[j];
+	// 				arr[i] = arr[j];
+	// 				arr[j] = arr[i];
+	// 			}
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
 }
 
 /**
@@ -286,7 +288,7 @@ public final class Solution {
 				    s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
-				System.out.println(s);
+				System.out.println(se);
 				break;
 			case "add":
 				int[] intArray = intArray(tokens[1]);
