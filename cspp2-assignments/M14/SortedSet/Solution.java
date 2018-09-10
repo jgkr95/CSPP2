@@ -327,7 +327,7 @@ public final class Solution {
 			case "subSet":
 				se = new SortedSet();
 				int[] arr = intArray(tokens[1]);
-				System.out.println(arr[0]+"  "+arr[1]);
+				// System.out.println(arr[0]+"  "+arr[1]);
 				int[] subset=se.subSet(arr[0], arr[1]);
 				Set temp= new Set();
 				// System.out.println(Arrays.toString(subset));
