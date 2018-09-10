@@ -168,7 +168,11 @@ class SortedSet extends Set {
 	//public SortedSet(int[] arr) {
 	//intArray=arr;
 	//}
+
 	public int[] subSet(int from, int to) {
+		if(from>to) {
+			System.out.println("Invalid Arguments to Subset Exception");
+		}
 		int[] subset = new int[10];
 		for (int i = 0, j = 0; i < size(); i++) {
 			if (get(i) >= from && get(i) < to) {
@@ -314,7 +318,12 @@ public final class Solution {
 			case "subSet":
 				se = new SortedSet();
 				int[] arr = intArray(tokens[1]);
-				System.out.println(se.subSet(arr[0], arr[1]));
+				int[] subset=se.subSet(arr[0], arr[1]);
+				Set temp= new Set();
+				for(int i=0;i<subset.length;i++) {
+					temp.add(subset[i]);
+				}
+				System.out.println(temp);
 				break;
 			case "headSet":
 				se = new SortedSet();
