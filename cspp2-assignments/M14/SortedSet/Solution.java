@@ -176,6 +176,7 @@ class SortedSet extends Set {
 		int[] subset = new int[10];
 		for (int i = 0, j = 0; i < size(); i++) {
 			if (get(i) >= from && get(i) < to) {
+				System.out.println(get(i));
 				subset[j] = get(i);
 				j++;
 			}
