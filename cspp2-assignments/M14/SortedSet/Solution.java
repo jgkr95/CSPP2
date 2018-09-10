@@ -176,6 +176,7 @@ class SortedSet extends Set {
 	public int[] subSet(int from, int to) {
 		if(from>to) {
 			System.out.println("Invalid Arguments to Subset Exception");
+			return null;
 		}
 		int[] subset = new int[10];
 		// System.out.println("size "+size());
