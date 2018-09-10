@@ -79,11 +79,33 @@ class Set {
 			resize();
 		}
 		if (!contains(item)) {
+			int size1=size;
+			for(int i=0;i<size;i++) {
+				if(item<=set[i]) {
+					add(i,item);
+				}
+			}
+			if(size1==size) {
+				add(item);
+			}
 			set[size++] = item;
 			// System.out.println(toString());
 			// Arrays.sort(set);
 			// System.out.println(toString());
 		}
+	}
+    public void add(final int index, final int item) {
+    // write the logic
+    try {
+        int[] newlist = new int[set.length];
+        for (int i = size; i >= index; i--) {
+            set[i + 1] = set[i];
+        }
+        set[index] = item;
+        size++;
+    } catch (Exception e) {
+        System.out.println("Negative Index Exception");
+    }
 	}
 	/**
 	 * { adds the array of ellements }.
@@ -224,11 +246,22 @@ class SortedSet extends Set {
 		// System.out.println(Arrays.toString(arr));
 		Arrays.sort(arr);
 		// System.out.println(Arrays.toString(arr));
-		for (int i = 0; i < arr.length; i++) {
+		for (int j = 0; j < arr.length; j++) {
 			// System.out.println(arr[i]);
-			if (!contains(arr[i])) {
-			add(arr[i]);
+			// if (!contains(arr[i])) {
+			// add(arr[i]);
+			// }
+			if (!contains(arr[j])) {
+			int size1=size();
+			for(int i=0;i<size();i++) {
+				if(arr[j]<=get(i)) {
+					add(i,arr[j]);
+				}
 			}
+			if(size1==size()) {
+				add(arr[j]);
+			}
+		}
 		}
 		// System.out.println(super.toString());
 		// System.out.println(super.size());
