@@ -220,6 +220,8 @@ class SortedSet extends Set {
 			add(arr[i]);
 		}
 		System.out.println(super.toString());
+		System.out.println(super.size());
+		System.out.println(size());
 	}
 	// public int[] sort(int[] arr) {
 	// 	int temp;
