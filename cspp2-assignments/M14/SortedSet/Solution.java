@@ -180,9 +180,9 @@ class SortedSet extends Set {
 		int[] subset = new int[10];
 		System.out.println("size "+size());
 		for (int i = 0, j = 0; i < size(); i++) {
-			System.out.println("here " + get(i));
+			// System.out.println("here " + get(i));
 			if (get(i) >= from && get(i) < to) {
-				System.out.println("get"+get(i));
+				// System.out.println("get"+get(i));
 				subset[j] = get(i);
 				j++;
 			}
