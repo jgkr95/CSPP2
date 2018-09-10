@@ -197,6 +197,10 @@ class SortedSet extends Set {
 		return headset;
 	}
 	public int last() {
+		if(size()==0) {
+			System.out.println("Set​ ​ Empty​ ​ Exception");
+			return -1;
+		}
 		return get(size() - 1);
 	}
 	public void addAll(int[] arr) {
