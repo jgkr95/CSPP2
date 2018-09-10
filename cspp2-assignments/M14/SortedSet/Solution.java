@@ -179,17 +179,23 @@ class SortedSet extends Set {
 			return null;
 		}
 		int[] subset = new int[10];
+		int j=0;
 		// System.out.println("size "+size());
-		for (int i = 0, j = 0; i < size(); i++) {
+		for (int i = 0; i < size(); i++) {
 			// System.out.println("here " + get(i));
 			if (get(i) >= from && get(i) < to) {
 				// System.out.println("get"+get(i));
 				subset[j] = get(i);
 				j++;
 			}
-
 		}
-		return subset;
+		int[] arr=new int[j];
+		for(int i=0;i<j;i++) {
+			arr[i]=subset[i];
+		}
+
+		
+		return arr;
 	}
 	public int[] headSet(int to) {
 		int[] headset = new int[10];
