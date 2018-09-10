@@ -207,7 +207,7 @@ class SortedSet extends Set {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
-        final int ten=10;
+        final int ten = 10;
         int[] subset = new int[ten];
         int j = 0;
         // System.out.println("size "+size());
@@ -235,7 +235,8 @@ class SortedSet extends Set {
      * @return     { headset is integer array }
      */
     public int[] headSet(final int to) {
-        int[] headset = new int[10];
+        final int ten = 10;
+        int[] headset = new int[ten];
         int i = 0, j = 0;
         while (i < size()) {
             if (get(i) < to) {
@@ -383,7 +384,7 @@ public final class Solution {
                 int[] subset = se.subSet(arr[0], arr[1]);
                 if (subset != null) {
                     System.out.println(
-                    Arrays.toString(subset).replace("[", "{").replace("]", "}"));
+                Arrays.toString(subset).replace("[", "{").replace("]", "}"));
                 }
                 // Set temp= new Set();
                 // // System.out.println(Arrays.toString(subset));
