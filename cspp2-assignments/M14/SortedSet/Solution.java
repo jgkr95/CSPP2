@@ -330,7 +330,7 @@ public final class Solution {
 				System.out.println(arr[0]+"  "+arr[1]);
 				int[] subset=se.subSet(arr[0], arr[1]);
 				Set temp= new Set();
-				System.out.println(Arrays.toString(subset));
+				// System.out.println(Arrays.toString(subset));
 				for(int i=0;i<subset.length;i++) {
 					temp.add(subset[i]);
 				}
