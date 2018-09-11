@@ -234,7 +234,7 @@ class SortedSet extends Set {
      *
      * @return     { headset is integer array }
      */
-    public int[] headSet(final int to) {
+    public int[] headSet(final int to) throws Exception {
         final int ten = 10;
         int[] headset = new int[ten];
         int i = 0, j = 0;
@@ -245,7 +245,9 @@ class SortedSet extends Set {
             }
             i++;
         }
-
+        if (j == 0) {
+            throw new Exception();
+        }
         return headset;
     }
     /**
@@ -403,18 +405,23 @@ public final class Solution {
                 break;
             case "headSet":
                 // se = new SortedSet();
-                int[] sub = se.headSet(Integer.parseInt(tokens[1]));
                 // subset=se.headSet(Integer.parseInt(tokens[1]));
-                Set temp1 = new Set();
-                for (int i = 0; i < sub.length; i++) {
-                    temp1.add(sub[i]);
-                }
+                try {
+                    int[] sub = se.headSet(Integer.parseInt(tokens[1]));
 
-                System.out.println(temp1);
-                break;
+                    Set temp1 = new Set();
+                    for (int i = 0; i < sub.length; i++) {
+                        temp1.add(sub[i]);
+                    }
+
+                    System.out.println(temp1);
+                } catch (Exception e) {
+                    System.out.println("Set Empty Exception");
+                    break;
+                }
             case "last":
                 // se = new SortedSet();
-                System.out.print(se.last());
+                System.out.println(se.last());
                 break;
             case "addAll":
                 // se = new SortedSet();
