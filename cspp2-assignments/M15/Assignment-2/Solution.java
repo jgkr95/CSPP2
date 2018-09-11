@@ -255,13 +255,14 @@ class SortedSet extends Set {
      *
      * @return     { largest element is returned }
      */
-    public int last() {
+    public int last() throws Exception {
         try {
             return get(size() - 1);
         } catch (Exception e) {
-            System.out.println("Set Empty Exception");
+            // System.out.println("Set Empty Exception");
+            throw new Exception();
         }
-        return get(size()-1);
+
     }
     /**
      * Adds all.
@@ -422,7 +423,12 @@ public final class Solution {
 
             case "last":
                 // se = new SortedSet();
-                System.out.println(se.last());
+                try {
+                    System.out.println(se.last());
+                } catch (Exception e) {
+                    System.out.println("Set Empty Exception");
+                    break;
+                }
                 break;
             case "addAll":
                 // se = new SortedSet();
