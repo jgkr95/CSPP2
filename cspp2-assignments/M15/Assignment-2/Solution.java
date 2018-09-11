@@ -110,6 +110,7 @@ class Set {
         for (int i = 0; i < newset.length; i++) {
             add(newset[i]);
         }
+        Arrays.sort(set);
     }
     /**
      * { Gives the common elements }.
