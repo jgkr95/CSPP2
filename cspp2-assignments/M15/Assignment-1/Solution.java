@@ -448,9 +448,9 @@ public final class Solution {
      */
     private Solution() { }
     /**
-     * main function.
+     * { Main method }.
      *
-     * @param      args  The arguments
+     * @param      args  The arguments are of string type
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
