@@ -228,8 +228,8 @@ class SortedSet extends Set {
     public int[] subSet(final int from, final int to)
      throws InvalidSubsetSelectionException {
         if (from > to) {
-            throw new InvalidSubsetSelectionException
-            ("Invalid Arguments to subset Exception");
+            throw new InvalidSubsetSelectionException(
+            "Invalid Arguments to subset Exception");
             // return null;
         }
         final int ten = 10;
