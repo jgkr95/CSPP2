@@ -437,7 +437,7 @@ class List {
      * @param      args  The arguments
      */
 
-    
+
 }
 public class Solution {
     public static void main(final String[] args) {
