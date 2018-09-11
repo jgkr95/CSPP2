@@ -417,8 +417,9 @@ public final class Solution {
                     System.out.println(temp1);
                 } catch (Exception e) {
                     System.out.println("Set Empty Exception");
-                    break;
                 }
+                break;
+
             case "last":
                 // se = new SortedSet();
                 System.out.println(se.last());
