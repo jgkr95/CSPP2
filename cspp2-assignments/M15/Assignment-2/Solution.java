@@ -1,7 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+class InvalidSubsetSelectionException extends Exception {
+    InvalidSubsetSelectionException(String s) {
+        super(s);
+    }
+}
 /**
  * Class for set.
  */
@@ -213,9 +217,9 @@ class SortedSet extends Set {
      * @return     { subset of set }
      * @throws      Exception {Invalid exception}
      */
-    public int[] subSet(final int from, final int to) throws Exception {
+    public int[] subSet(final int from, final int to) throws InvalidSubsetSelectionException {
         if (from > to) {
-            throw new Exception("Invalid");
+            throw new InvalidSubsetSelectionException("Invalid Arguments to subset Exception");
             // return null;
         }
         final int ten = 10;
@@ -412,7 +416,7 @@ public final class Solution {
                     // if(temp.size()>0) {
                     //  System.out.println(temp);
                     // }
-                } catch (Exception e) {
+                } catch (InvalidSubsetSelectionException e) {
                     System.out.println("Invalid Arguments to Subset Exception");
 
                 }
