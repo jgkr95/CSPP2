@@ -210,7 +210,7 @@ class SortedSet extends Set {
      *
      * @param      from  The from is of integer type
      * @param      to    { to is of intger type }
-     *
+     * @throws     Exception
      * @return     { subset of set }
      */
     public int[] subSet(final int from, final int to) throws Exception {
@@ -400,7 +400,7 @@ public final class Solution {
                     int[] subset = se.subSet(arr[0], arr[1]);
                     if (subset != null) {
                         System.out.println(
-                            Arrays.toString(subset).replace("[", "{").replace("]", "}"));
+                    Arrays.toString(subset).replace("[", "{").replace("]", "}"));
                     }
                     // Set temp= new Set();
                     // // System.out.println(Arrays.toString(subset));
