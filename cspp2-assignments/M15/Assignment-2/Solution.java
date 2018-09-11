@@ -107,10 +107,20 @@ class Set {
      * @param      newset  The newset is of array integer type
      */
     public void add(final int[] newset) {
-        for (int i = 0; i < newset.length; i++) {
-            add(newset[i]);
+        for (int j = 0; j < newset.length; j++) {
+            if (!contains(newset[j])) {
+                int size1 = size();
+                for (int i = 0; i < size(); i++) {
+                    if (newset[j] <= get(i)) {
+                        add(i, newset[j]);
+                    }
+                }
+                if (size1 == size()) {
+                    add(newset[j]);
+                }
+            }
         }
-        Arrays.sort(set);
+        // Arrays.sort(set);
     }
     /**
      * { Gives the common elements }.
