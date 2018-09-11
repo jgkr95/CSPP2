@@ -1,8 +1,16 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s) {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { string variable }
+     */
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
