@@ -442,7 +442,7 @@ class List {
 
 
 }
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
