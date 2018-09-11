@@ -402,7 +402,7 @@ public final class Solution {
                     int[] subset = se.subSet(arr[0], arr[1]);
                     if (subset != null) {
                         System.out.println(
-                    Arrays.toString(subset).replace("[", "{").replace("]", "}"));
+            Arrays.toString(subset).replace("[", "{").replace("]", "}"));
                     }
                     // Set temp= new Set();
                     // // System.out.println(Arrays.toString(subset));
