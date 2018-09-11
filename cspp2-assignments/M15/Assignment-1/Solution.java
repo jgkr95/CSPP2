@@ -70,7 +70,7 @@ class List {
     /**
      * constructor for class list.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -150,6 +150,7 @@ class List {
      * removes the particular element.
      *
      * @param      index  The index
+     * @throws     Exception { Invalid Position }
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
@@ -365,6 +366,7 @@ class List {
      * @param      end    The end
      *
      * @return     sublist
+     * @throws     Exception { Index out of bounds }
      */
     public List subList(final int start, final int end) throws Exception {
         // write the logic for subList
@@ -436,15 +438,20 @@ class List {
         size = 0;
 
     }
+
+
+
+}
+public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() { }
     /**
      * main function.
      *
      * @param      args  The arguments
      */
-
-
-}
-public class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
