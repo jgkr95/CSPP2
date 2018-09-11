@@ -244,6 +244,7 @@ class SortedSet extends Set {
      * @param      to    { is of intger type }
      *
      * @return     { headset is integer array }
+     * @throws     Exception { set empty exception }
      */
     public int[] headSet(final int to) throws Exception {
         final int ten = 10;
@@ -265,6 +266,7 @@ class SortedSet extends Set {
      * { returns the last element of the set array }.
      *
      * @return     { largest element is returned }
+     * @throws     Exception { Index out of bound }
      */
     public int last() throws Exception {
         try {
