@@ -383,7 +383,7 @@ class List {
             return newlist;
         } else {
             // System.out.println("Index Out of Bounds Exception");
-            throw new Exception("IndexOutOfBoundsException");
+            throw new Exception("Index Out OfBoundsException");
             // return null;
         }
 
@@ -535,7 +535,7 @@ public class Solution {
                 }
                 break;
             } catch(Exception e) {
-                System.out.println("IndexOutOfBoundsException");
+                System.out.println("Index Out Of Bounds Exception");
             } finally {
                 break;
             }
