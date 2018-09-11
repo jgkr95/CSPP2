@@ -223,11 +223,13 @@ class SortedSet extends Set {
      * @param      from  The from is of integer type
      * @param      to    { to is of intger type }
      * @return     { subset of set }
-     * @throws      Exception {Invalid exception}
+     * @throws      InvalidSubsetSelectionException {Invalid exception}
      */
-    public int[] subSet(final int from, final int to) throws InvalidSubsetSelectionException {
+    public int[] subSet(final int from, final int to)
+     throws InvalidSubsetSelectionException {
         if (from > to) {
-            throw new InvalidSubsetSelectionException("Invalid Arguments to subset Exception");
+            throw new InvalidSubsetSelectionException
+            ("Invalid Arguments to subset Exception");
             // return null;
         }
         final int ten = 10;
