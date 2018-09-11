@@ -210,8 +210,8 @@ class SortedSet extends Set {
      *
      * @param      from  The from is of integer type
      * @param      to    { to is of intger type }
-     * @throws     Exception
      * @return     { subset of set }
+     * @throws      Exception {Invalid exception}
      */
     public int[] subSet(final int from, final int to) throws Exception {
         if (from > to) {
