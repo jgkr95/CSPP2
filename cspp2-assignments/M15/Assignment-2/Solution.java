@@ -414,7 +414,7 @@ public final class Solution {
                 break;
             case "last":
                 // se = new SortedSet();
-                System.out.println(se.last());
+                System.out.print(se.last());
                 break;
             case "addAll":
                 // se = new SortedSet();
