@@ -151,7 +151,7 @@ class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -162,7 +162,8 @@ class List {
             size--;
             // System.out.println(Arrays.toString(list));
         } else {
-            System.out.println("Invalid Position Exception");
+            throw new Exception("InvalidPositionException");
+            // System.out.println("Invalid Position Exception");
         }
     }
 
@@ -304,7 +305,7 @@ class List {
      */
     public int count(final int item) {
         int count = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size(); i++) {
             if (item == list[i]) {
                 count++;
             }
@@ -340,7 +341,9 @@ class List {
                 // j--;
                 indexx = indexOf(newArray[j]);
                 if (indexx >= 0 && indexx < size) {
-                    remove(indexx);
+                    try {
+                        remove(indexx);
+                    } catch(Exception e) { }
                 }
             }
 
@@ -363,13 +366,14 @@ class List {
      *
      * @return     sublist
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception{
         // write the logic for subList
         // int[] newlist=new int[end-start];
         List newlist = new List();
         if (size == 0 || start < 0 || start > size || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            // System.out.println("Index Out of Bounds Exception");
+            throw new Exception("IndexOutOfBoundsException");
+            // return null;
         }
         if (start >= 0 && end <= size) {
             // int j=0;
@@ -378,8 +382,9 @@ class List {
             }
             return newlist;
         } else {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
+            // System.out.println("Index Out of Bounds Exception");
+            throw new Exception("IndexOutOfBoundsException");
+            // return null;
         }
 
     }
@@ -469,10 +474,16 @@ public class Solution {
                 System.out.println(l);
                 break;
             case "remove":
+            try{
                 if (tokens.length == 2) {
                     l.remove(Integer.parseInt(tokens[1]));
                 }
                 break;
+            } catch(Exception e) {
+                System.out.println("Invalid Position Exception");
+            } finally {
+                break;
+            }
             case "indexOf":
                 if (tokens.length == 2) {
                     System.out.println(l.indexOf(
@@ -512,6 +523,7 @@ public class Solution {
                 }
                 break;
             case "subList":
+            try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -522,6 +534,11 @@ public class Solution {
                     System.out.println(object);
                 }
                 break;
+            } catch(Exception e) {
+                System.out.println("IndexOutOfBoundsException");
+            } finally {
+                break;
+            }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -533,7 +550,9 @@ public class Solution {
                 }
                 break;
             case "count":
+                // System.out.println(tokens[1]);
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
+                break;
             case "clear":
                 l.clear();
                 break;
