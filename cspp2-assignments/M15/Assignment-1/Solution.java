@@ -162,7 +162,7 @@ class List {
             size--;
             // System.out.println(Arrays.toString(list));
         } else {
-            throw new Exception("InvalidPositionException");
+            throw new Exception();
             // System.out.println("Invalid Position Exception");
         }
     }
@@ -372,7 +372,7 @@ class List {
         List newlist = new List();
         if (size == 0 || start < 0 || start > size || end > size) {
             // System.out.println("Index Out of Bounds Exception");
-            throw new Exception("IndexOutOfBoundsException");
+            throw new Exception();
             // return null;
         }
         if (start >= 0 && end <= size) {
@@ -383,7 +383,7 @@ class List {
             return newlist;
         } else {
             // System.out.println("Index Out of Bounds Exception");
-            throw new Exception("Index Out OfBoundsException");
+            throw new Exception();
             // return null;
         }
 
