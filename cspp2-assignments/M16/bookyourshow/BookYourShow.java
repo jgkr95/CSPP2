@@ -13,7 +13,7 @@ class Show {
 		return movie + "," + dateandtime;
 	}
 	public String getdetails() {
-		return movie + "," + dateandtime + "," + Arrays.toString(seatnumbers);
+		return movie + "," + dateandtime + "," + Arrays.toString(seatnumbers).replace(" ","");
 	}
 	public String getmovie() {
 		return movie;
