@@ -10,7 +10,7 @@ class Show {
 
 	}
 	public String toString() {
-		return movie + "," + dateandtime + ",";
+		return movie + "," + dateandtime;
 	}
 	public String getdetails() {
 		return movie + "," + dateandtime + "," + Arrays.toString(seatnumbers);
