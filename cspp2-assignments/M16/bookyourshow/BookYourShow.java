@@ -84,7 +84,7 @@ class BookYourShow {
 	public void printTicket(String moviename, String date, String mobieno) {
 		String str = "Invalid";
 		if (getAShow(moviename, date) != null) {
-			str = "No Show";
+			str = "No show";
 			for (int i = 0; i < patronscount; i++) {
 				str = "Invalid";
 				if (patrons[i].getNum().equals(mobieno)) {
