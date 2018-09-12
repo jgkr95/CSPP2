@@ -10,6 +10,9 @@ class Show {
 
 	}
 	public String toString() {
+		return movie + "," + dateandtime + ",";
+	}
+	public String getdetails() {
 		return movie + "," + dateandtime + "," + Arrays.toString(seatnumbers);
 	}
 	public String getmovie() {
@@ -91,7 +94,7 @@ class BookYourShow {
 	}
 	public void showAll() {
 		for (int i = 0; i < count; i++) {
-			System.out.println(s[i]);
+			System.out.println(s[i].getdetails());
 		}
 
 	}
