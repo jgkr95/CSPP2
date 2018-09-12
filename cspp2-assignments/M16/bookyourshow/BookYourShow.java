@@ -36,10 +36,10 @@ class Patron {
 }
 
 class BookYourShow {
-	private int count = 0;
+	public int count = 0;
 	private Show[] s;
 	private Patron[] patrons;
-	private int patronscount = 0;
+	public int patronscount = 0;
 	BookYourShow() {
 		s = new Show[10];
 		patrons = new Patron[10];
