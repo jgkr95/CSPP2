@@ -76,6 +76,9 @@ class BookYourShow {
 				}
 			}
 		}
+		else {
+			System.out.println("No Show");
+		}
 
 	}
 	public void printTicket(String moviename, String date, String mobieno) {
