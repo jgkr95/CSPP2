@@ -79,7 +79,7 @@ class BookYourShow {
 		String str = "Invalid";
 		if (getAShow(moviename, date) != null) {
 			str = "No Show";
-			for (int i = 0; i < count; i++) {
+			for (int i = 0; i < patronscount; i++) {
 				str = "Invalid";
 				if (patrons[i].getNum().equals(mobieno)) {
 					str = mobieno + " " + moviename + " " + date;
