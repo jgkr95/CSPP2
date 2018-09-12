@@ -41,7 +41,8 @@ class BookYourShow {
 	private Patron[] patrons;
 	private int patronscount = 0;
 	public void addAShow(Show showobj) {
-		s[count++] = showobj;
+		// s[count++] = showobj;
+		s[count++] = new Show(showobj.getmovie(), showobj.getdate(), showobj.getseats());
 		// count++;
 
 	}
