@@ -42,6 +42,7 @@ class BookYourShow {
 	private int patronscount = 0;
 	BookYourShow() {
 		s = new Show[10];
+		patrons = new Patron[10];
 	}
 	public void addAShow(Show showobj) {
 		// s[count++] = showobj;
