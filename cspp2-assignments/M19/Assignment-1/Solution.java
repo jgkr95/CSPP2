@@ -91,6 +91,15 @@ public final class Solution {
 	        	}
 	        	if(!(Integer.parseInt(token[2])<choices.length && Integer.parseInt(token[2])>0)) {
 	        		System.out.println("Error! Correct answer choice number is out of range for "+token[0]);
+	        		continue;
+	        	}
+	        	if(Integer.parseInt(token[4])>0) {
+	        		System.out.println("Invalid penalty for "+token[0]);
+	        		continue;
+	        	}
+	        	if(Integer.parseInt(token[3])<=0) {
+	        		System.out.println("Invalid max marks for "+token[0]);
+	        		continue;
 	        	}
 	        	// quiz =new Quiz(token[0],choices,token[2],token[3],token[4]);
 	        }
