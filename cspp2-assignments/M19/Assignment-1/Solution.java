@@ -88,6 +88,9 @@ public final class Solution {
 	        	if(choices.length<2) {
 	        		System.out.println(token[0]+" does not have enough answer choices");
 	        	}
+	        	if(!(Integer.parseInt(token[2])<choices.length && Integer.parseInt(token[2])>0)) {
+	        		System.out.println("Error! Correct answer choice number is out of range for "+token[0]);
+	        	}
 	        	// quiz =new Quiz(token[0],choices,token[2],token[3],token[4]);
 	        }
 	    }
@@ -143,7 +146,7 @@ class Quiz {
 		this.penalty=penalty;
 	}
 	Quiz() {
-		
+
 	}
 
 }
