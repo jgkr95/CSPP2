@@ -82,8 +82,12 @@ public final class Solution {
 	        	if(token.length!=5) {
 	        		System.out.println("Error! Malformed question");
 	        		continue;
+
 	        	}
 	        	String[] choices = token[1].split(",");
+	        	if(choices.length<2) {
+	        		System.out.println(token[0]+" does not have enough answer choices");
+	        	}
 	        	// quiz =new Quiz(token[0],choices,token[2],token[3],token[4]);
 	        }
 	    }
@@ -103,6 +107,13 @@ public final class Solution {
         // System.out.println(s);
         // System.out.println(quiz);
         // System.out.println(answerCount);
+        for(int j=0;j<answerCount;j++) {
+	        System.out.println(quiz.questiontext);
+	        for(int i=0;i<quiz.choices.length;i++) {
+	        	System.out.println(quiz.choices[i]+"	");
+	        }
+	        System.out.println();
+	    }
     }
 
     /**
@@ -118,7 +129,21 @@ public final class Solution {
     // }
 }
 class Quiz {
-	Quiz() {
-
+	public String questiontext;
+	public String[] choices;
+	public String correctchoice;
+	public int marks;
+	public int penalty;
+	public int marksawarded;
+	Quiz(String questiontext, String[] choices, String correctchoice, int marks, int penalty) {
+		this.questiontext=questiontext;
+		this.choices=choices;
+		this.correctchoice=correctchoice;
+		this.marks=marks;
+		this.penalty=penalty;
 	}
+	Quiz() {
+		
+	}
+
 }
