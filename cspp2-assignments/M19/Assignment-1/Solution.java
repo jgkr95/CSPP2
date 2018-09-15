@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
-
 /**
  * Solution class for code-eval.
  */
@@ -82,7 +80,7 @@ public final class Solution {
         // System.out.println(questionCount);
         // questionCount=s.nextInt();
         String question;
-
+        final int three=3, five = 5, one = 1, two = 2, four = 4, zero = 0;
         // Quiz[] quiz
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
@@ -91,34 +89,34 @@ public final class Solution {
                 question = s.nextLine();
                 String[] token = question.split(":");
                 // System.out.println("-"+token[0]+"-");
-                if (token.length != 5 ||
-                 token[0].equals(null) || token[0].equals("")) {
+                if (token.length != five
+                 ||token[zero].equals(null) || token[zero].equals("")) {
                     System.out.println("Error! Malformed question");
                     continue;
 
                 }
-                String[] choices = token[1].split(",");
-                if (choices.length < 2) {
+                String[] choices = token[one].split(",");
+                if (choices.length < two) {
                     System.out.println(
-                        token[0] + " does not have enough answer choices");
+                        token[zero] + " does not have enough answer choices");
                     continue;
                 }
-                if (!(Integer.parseInt(token[2]) < choices.length 
-                    && Integer.parseInt(token[2]) > 0)) {
+                if (!(Integer.parseInt(token[two]) < choices.length 
+                    && Integer.parseInt(token[two]) > zero)) {
                     System.out.println(
-        "Error! Correct answer choice number is out of range for " + token[0]);
+        "Error! Correct answer choice number is out of range for " + token[zero]);
                     continue;
                 }
-                if (Integer.parseInt(token[4]) > 0) {
-                    System.out.println("Invalid penalty for " + token[0]);
+                if (Integer.parseInt(token[four]) > zero) {
+                    System.out.println("Invalid penalty for " + token[zero]);
                     continue;
                 }
-                if (Integer.parseInt(token[3]) <= 0) {
-                    System.out.println("Invalid max marks for " + token[0]);
+                if (Integer.parseInt(token[three]) <= zero) {
+                    System.out.println("Invalid max marks for " + token[zero]);
                     continue;
                 }
-                // questionquiz[count++] =new Question(token[0],choices,
-                // token[2],Integer.parseInt(token[3]),Integer.parseInt(token[4]));
+                // questionquiz[count++] =new Question(token[zero],choices,
+        // token[2],Integer.parseInt(token[three]),Integer.parseInt(token[four]));
             }
         }
     }
