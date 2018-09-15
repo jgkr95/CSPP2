@@ -26,10 +26,10 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            System.out.println(line);
+            System.out.println("line  "+line);
             String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
-            System.out.println(Arrays.toString(tokens));
+            System.out.println("Tokens"+Arrays.toString(tokens));
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
