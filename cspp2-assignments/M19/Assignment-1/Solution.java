@@ -107,13 +107,13 @@ public final class Solution {
         // System.out.println(s);
         // System.out.println(quiz);
         // System.out.println(answerCount);
-        for(int j=0;j<answerCount;j++) {
-	        System.out.println(quiz.questiontext);
-	        for(int i=0;i<quiz.choices.length;i++) {
-	        	System.out.println(quiz.choices[i]+"	");
-	        }
-	        System.out.println();
-	    }
+     //    for(int j=0;j<answerCount;j++) {
+	    //     System.out.println(quiz.questiontext);
+	    //     for(int i=0;i<quiz.choices.length;i++) {
+	    //     	System.out.println(quiz.choices[i]+"	");
+	    //     }
+	    //     System.out.println();
+	    // }
     }
 
     /**
