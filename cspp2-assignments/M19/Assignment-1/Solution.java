@@ -26,10 +26,10 @@ public final class Solution {
             // read the line
             String line = s.nextLine();
              // split the line using space
-            System.out.println("line  "+line);
+            // System.out.println("line  "+line);
             String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
-            System.out.println("Tokens"+Arrays.toString(tokens));
+            // System.out.println("Tokens"+Arrays.toString(tokens));
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
@@ -70,7 +70,23 @@ public final class Solution {
         // System.out.println(quiz);
         // System.out.println(questionCount);
         // questionCount=s.nextInt();
-        for(int i=0;i<questionCount;i++);
+        String question;
+        // Quiz[] quiz
+        if(questionCount==0) {
+        	System.out.println("Quiz does not have questions");
+        }
+        else{
+	        for(int i=0;i<questionCount;i++) {
+	        	question=s.nextLine();
+	        	String[] token = question.split(":");
+	        	if(token.length!=5) {
+	        		System.out.println("Error! Malformed question");
+	        		continue;
+	        	}
+	        	String[] choices = token[1].split(",");
+	        	// quiz =new Quiz(token[0],choices,token[2],token[3],token[4]);
+	        }
+	    }
     }
 
     /**
