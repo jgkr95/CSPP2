@@ -78,6 +78,7 @@ public final class Solution {
 			for (int i = 0; i < questionCount; i++) {
 				question = s.nextLine();
 				String[] token = question.split(":");
+				System.out.println("-"+token[0]+"-");
 				if (token.length != 5||token[0]==null||token[0]=="") {
 					System.out.println("Error! Malformed question");
 					continue;
