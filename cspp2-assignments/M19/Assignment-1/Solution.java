@@ -80,7 +80,7 @@ public final class Solution {
         // System.out.println(questionCount);
         // questionCount=s.nextInt();
         String question;
-        final int three=3, five = 5, one = 1, two = 2, four = 4, zero = 0;
+        final int three = 3, five = 5, one = 1, two = 2, four = 4, zero = 0;
         // Quiz[] quiz
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
@@ -90,7 +90,7 @@ public final class Solution {
                 String[] token = question.split(":");
                 // System.out.println("-"+token[0]+"-");
                 if (token.length != five
-                 ||token[zero].equals(null) || token[zero].equals("")) {
+                 || token[zero].equals(null) || token[zero].equals("")) {
                     System.out.println("Error! Malformed question");
                     continue;
 
@@ -101,10 +101,11 @@ public final class Solution {
                         token[zero] + " does not have enough answer choices");
                     continue;
                 }
-                if (!(Integer.parseInt(token[two]) < choices.length 
+                if (!(Integer.parseInt(token[two]) < choices.length
                     && Integer.parseInt(token[two]) > zero)) {
                     System.out.println(
-        "Error! Correct answer choice number is out of range for " + token[zero]);
+        "Error! Correct answer choice number is out of range for "
+         + token[zero]);
                     continue;
                 }
                 if (Integer.parseInt(token[four]) > zero) {
@@ -116,7 +117,7 @@ public final class Solution {
                     continue;
                 }
                 // questionquiz[count++] =new Question(token[zero],choices,
-        // token[2],Integer.parseInt(token[three]),Integer.parseInt(token[four]));
+    // token[2],Integer.parseInt(token[three]),Integer.parseInt(token[four]));
             }
         }
     }
@@ -146,7 +147,7 @@ public final class Solution {
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -161,11 +162,29 @@ public final class Solution {
  * Class for question.
  */
 class Question {
+    /**
+     * { questiontext }.
+     */
     private String questiontext;
+    /**
+     * { choices array }.
+     */
     private String[] choices;
+    /**
+     * { correctchoice answer }.
+     */
     private String correctchoice;
+    /**
+     * { marks for the question }.
+     */
     private int marks;
+    /**
+     * { penalty if answer given wrong }.
+     */
     private int penalty;
+    /**
+     * { awarded marks }.
+     */
     private int marksawarded;
     /**
      * Constructs the object.
