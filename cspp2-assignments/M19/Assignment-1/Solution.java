@@ -71,6 +71,7 @@ public final class Solution {
 		// System.out.println(questionCount);
 		// questionCount=s.nextInt();
 		String question;
+		Question[] questionquiz = new Question[questionCount];
 		// Quiz[] quiz
 		if (questionCount == 0) {
 			System.out.println("Quiz does not have questions");
@@ -101,7 +102,7 @@ public final class Solution {
 					System.out.println("Invalid max marks for " + token[0]);
 					continue;
 				}
-				// quiz =new Quiz(token[0],choices,token[2],token[3],token[4]);
+				questionquiz[i] =new Question(token[0],choices,token[2],Integer.parseInt(token[3]),Integer.parseInt(token[4]));
 			}
 		}
 	}
@@ -141,22 +142,23 @@ public final class Solution {
 	// 	return this.
 	// }
 }
-class Quiz {
+class Question {
 	public String questiontext;
 	public String[] choices;
 	public String correctchoice;
 	public int marks;
 	public int penalty;
 	public int marksawarded;
-	Quiz(String questiontext, String[] choices, String correctchoice, int marks, int penalty) {
+	Question(String questiontext, String[] choices, String correctchoice, int marks, int penalty) {
 		this.questiontext = questiontext;
 		this.choices = choices;
 		this.correctchoice = correctchoice;
 		this.marks = marks;
 		this.penalty = penalty;
 	}
-	Quiz() {
 
-	}
+
+}
+class Quiz {
 
 }
