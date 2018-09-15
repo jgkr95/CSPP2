@@ -87,6 +87,7 @@ public final class Solution {
 	        	String[] choices = token[1].split(",");
 	        	if(choices.length<2) {
 	        		System.out.println(token[0]+" does not have enough answer choices");
+	        		continue;
 	        	}
 	        	if(!(Integer.parseInt(token[2])<choices.length && Integer.parseInt(token[2])>0)) {
 	        		System.out.println("Error! Correct answer choice number is out of range for "+token[0]);
