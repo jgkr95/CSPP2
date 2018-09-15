@@ -19,6 +19,7 @@ public final class Solution {
 	public static void main(final String[] args) {
 		// instantiate this Quiz
 		Quiz q = new Quiz();
+		
 		// code to read the test cases input file
 		Scanner s = new Scanner(System.in);
 		// check if there is one more line to process
@@ -30,11 +31,17 @@ public final class Solution {
 			String[] tokens = line.split(" ");
 			// based on the list operation invoke the corresponding method
 			// System.out.println("Tokens"+Arrays.toString(tokens));
+			// if(!tokens[1].equals(null)) {
+			// 	Question[] questionquiz = new Question[Integer.parseInt(tokens[1])];
+			// 	public int count=0;
+			// }
 			switch (tokens[0]) {
 			case "LOAD_QUESTIONS":
 				System.out.println("|----------------|");
 				System.out.println("| Load Questions |");
 				System.out.println("|----------------|");
+				// Question[] questionquiz = new Question[Integer.parseInt(tokens[1])];
+				// public int count=0;
 				loadQuestions(s, q, Integer.parseInt(tokens[1]));
 				// System.out.println(Integer.parseInt(tokens[1]));
 				break;
@@ -55,6 +62,7 @@ public final class Solution {
 			}
 		}
 	}
+
 	/**
 	 * Loads questions.
 	 *
@@ -71,7 +79,7 @@ public final class Solution {
 		// System.out.println(questionCount);
 		// questionCount=s.nextInt();
 		String question;
-		Question[] questionquiz = new Question[questionCount];
+		
 		// Quiz[] quiz
 		if (questionCount == 0) {
 			System.out.println("Quiz does not have questions");
@@ -102,7 +110,7 @@ public final class Solution {
 					System.out.println("Invalid max marks for " + token[0]);
 					continue;
 				}
-				questionquiz[i] =new Question(token[0],choices,token[2],Integer.parseInt(token[3]),Integer.parseInt(token[4]));
+				// questionquiz[count++] =new Question(token[0],choices,token[2],Integer.parseInt(token[3]),Integer.parseInt(token[4]));
 			}
 		}
 	}
@@ -121,10 +129,10 @@ public final class Solution {
 		// System.out.println(s);
 		// System.out.println(quiz);
 		// System.out.println(answerCount);
-		//    for(int j=0;j<answerCount;j++) {
-		//     System.out.println(quiz.questiontext);
-		//     for(int i=0;i<quiz.choices.length;i++) {
-		//     	System.out.println(quiz.choices[i]+"	");
+		//    for(int j=0;j<count;j++) {
+		//     System.out.println(questionquiz[j].questiontext);
+		//     for(int i=0;i<questionquiz[j].choices.length;i++) {
+		//     	System.out.println(questionquiz[j].choices[i]+"	");
 		//     }
 		//     System.out.println();
 		// }
