@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  * Solution class for code-eval.
@@ -28,6 +29,7 @@ public final class Solution {
             System.out.println(line);
             String[] tokens = line.split(" ");
               // based on the list operation invoke the corresponding method
+            System.out.println(Arrays.toString(tokens));
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
