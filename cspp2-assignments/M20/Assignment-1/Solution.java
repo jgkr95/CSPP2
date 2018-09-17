@@ -351,7 +351,7 @@ public final class Solution {
 
 		}
 		if (quiz.getsize() != 0) {
-			System.out.println("Total Score:" + Total);
+			System.out.println("Total Score: " + Total);
 		}
 
 	}
