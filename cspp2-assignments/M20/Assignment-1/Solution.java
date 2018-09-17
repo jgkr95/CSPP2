@@ -267,7 +267,8 @@ public final class Solution {
         	if (token.length != five
                  || token[zero].equals(null) || token[zero].equals("")) {
                     System.out.println("Error! Malformed question");
-                    continue;
+                break;
+                    // continue;
 
                 }
                 if (data.length < two) {
