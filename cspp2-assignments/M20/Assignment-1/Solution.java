@@ -289,11 +289,11 @@ public final class Solution {
         	System.out.println(que.getQuestionText());
         	String[] choice = que.getChoice();
         	for(int j = 0; j < choice.length; j++) {
-        		System.out.println(choice[j]);
+        		System.out.print(choice[j]);
         		if(i<choice.length-1) {
-        			System.out.println("\t");
+        			System.out.print("\t");
         		}
-        	}
+        	} System.out.println();
         	que.setResponse(scan.nextLine());
         }
     }
