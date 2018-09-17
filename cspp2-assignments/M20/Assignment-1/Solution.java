@@ -343,7 +343,7 @@ public final class Solution {
         	if(qu.getResponse()>0) {
         		System.out.println("Correct Answer! - Marks Awarded: "+ qu.getResponse());
         	}
-        	if(!(qu.getResponse()<1)) {
+        	if(!(qu.getResponse()<0)) {
         		System.out.println("Wrong Answer! - Penalty: "+ qu.getResponse());
         	}
         	Total = qu.getResponse();
