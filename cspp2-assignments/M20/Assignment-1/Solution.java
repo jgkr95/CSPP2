@@ -278,13 +278,13 @@ public final class Solution {
 					    token[zero] + " does not have enough answer choices");
 					continue;
 				}
-				        if (!(Integer.parseInt(token[two]) <= data.length
-				            && Integer.parseInt(token[two]) > zero)) {
-				            System.out.println(
-				"Error! Correct answer choice number is out of range for "
-				 + token[zero]);
-				            continue;
-				        }
+				if (!(Integer.parseInt(token[two]) <= data.length
+				        && Integer.parseInt(token[two]) > zero)) {
+					System.out.println(
+					    "Error! Correct answer choice number is out of range for "
+					    + token[zero]);
+					continue;
+				}
 				if (Integer.parseInt(token[four]) > zero) {
 					System.out.println("Invalid penalty for " + token[zero]);
 					continue;
@@ -322,10 +322,10 @@ public final class Solution {
 			Question que = quiz.getQuestion(i);
 			System.out.println(que.getQuestionText() + "(" + que.getMaxMarks() + ")");
 			String[] choice = que.getChoice();
-			for (int j = 0; j < choice.length-1; j++) {
-				System.out.print(choice[j]+"\t");
+			for (int j = 0; j < choice.length - 1; j++) {
+				System.out.print(choice[j] + "\t");
 
-			} System.out.println(choice[choice.length-1]);
+			} System.out.println(choice[choice.length - 1]);
 			System.out.println();
 			que.setResponse(scan.nextLine());
 		}
@@ -338,7 +338,7 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
 		Question qu;
-		int Total = 0;
+		int total = 0;
 		for (int i = 0; i < quiz.getsize(); i++) {
 			qu = quiz.getQuestion(i);
 			System.out.println(qu.getQuestionText());
@@ -347,11 +347,11 @@ public final class Solution {
 			} else {
 				System.out.println(" Wrong Answer! - Penalty: " + qu.getResponse());
 			}
-			Total += qu.getResponse();
+			total += qu.getResponse();
 
 		}
 		if (quiz.getsize() != 0) {
-			System.out.println("Total Score: " + Total);
+			System.out.println("Total Score: " + total);
 		}
 
 	}
