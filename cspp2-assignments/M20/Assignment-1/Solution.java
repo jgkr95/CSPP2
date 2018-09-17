@@ -153,12 +153,12 @@ class Quiz {
      */
     private int size;
     /**
-     * Constructs the object.
-     */
-    /**
      * { var_description }.
      */
-    final int ten = 10;
+    private final int ten = 10;
+    /**
+     * Constructs the object.
+     */
     Quiz() {
         questions = new Question[ten];
         size = 0;
@@ -301,7 +301,7 @@ public final class Solution {
 
                 quiz.addQuestion(new Question(token[zero],
                  data, Integer.parseInt(token[two]),
-                    Integer.parseInt(token[three]), Integer.parseInt(token[four])));
+        Integer.parseInt(token[three]), Integer.parseInt(token[four])));
 
             }
             if (quiz.getsize() != 0) {
