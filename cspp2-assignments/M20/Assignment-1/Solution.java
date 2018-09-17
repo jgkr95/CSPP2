@@ -322,12 +322,10 @@ public final class Solution {
 			Question que = quiz.getQuestion(i);
 			System.out.println(que.getQuestionText() + "(" + (i + 1) + ")");
 			String[] choice = que.getChoice();
-			for (int j = 0; j < choice.length; j++) {
-				System.out.print(choice[j]);
-				if (i < choice.length) {
-					System.out.print("\t");
-				}
-			} System.out.println();
+			for (int j = 0; j < choice.length-1; j++) {
+				System.out.print(choice[j]+"\t");
+
+			} System.out.println(choice[choice.length-1]);
 			System.out.println();
 			que.setResponse(scan.nextLine());
 		}
