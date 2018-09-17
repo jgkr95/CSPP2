@@ -344,9 +344,9 @@ public final class Solution {
 			qu = quiz.getQuestion(i);
 			System.out.println(qu.getQuestionText());
 			if (qu.getResponse() > 0) {
-				System.out.println("Correct Answer! - Marks Awarded: " + qu.getResponse());
+				System.out.println(" Correct Answer! - Marks Awarded: " + qu.getResponse());
 			} else {
-				System.out.println("Wrong Answer! - Penalty: " + qu.getResponse());
+				System.out.println(" Wrong Answer! - Penalty: " + qu.getResponse());
 			}
 			Total = qu.getResponse();
 
