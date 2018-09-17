@@ -267,8 +267,8 @@ public final class Solution {
         	if (token.length != five
                  || token[zero].equals(null) || token[zero].equals("")) {
                     System.out.println("Error! Malformed question");
-                break;
-                    // continue;
+                // break;
+                continue;
 
                 }
                 if (data.length < two) {
@@ -312,8 +312,8 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         String[] respone = new String[q];
-        // String[] 
-        for(int i = 0; i < q; i++) {
+        int questioncount = quiz.getsize();
+        for(int i = 0; i < questioncount; i++) {
         	Question que = quiz.getQuestion(i);
         	System.out.println(que.getQuestionText()+"("+(i+1)+")");
         	String[] choice = que.getChoice();
