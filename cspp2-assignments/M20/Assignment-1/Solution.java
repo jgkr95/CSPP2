@@ -278,13 +278,13 @@ public final class Solution {
 					    token[zero] + " does not have enough answer choices");
 					continue;
 				}
-				//         if (!(Integer.parseInt(token[two]) < data.length
-				//             && Integer.parseInt(token[two]) > zero)) {
-				//             System.out.println(
-				// "Error! Correct answer choice number is out of range for "
-				//  + token[zero]);
-				//             continue;
-				//         }
+				        if (!(Integer.parseInt(token[two]) < data.length
+				            && Integer.parseInt(token[two]) > zero)) {
+				            System.out.println(
+				"Error! Correct answer choice number is out of range for "
+				 + token[zero]);
+				            continue;
+				        }
 				if (Integer.parseInt(token[four]) > zero) {
 					System.out.println("Invalid penalty for " + token[zero]);
 					continue;
