@@ -155,6 +155,9 @@ class Quiz {
     /**
      * Constructs the object.
      */
+    /**
+     * { var_description }.
+     */
     final int ten = 10;
     Quiz() {
         questions = new Question[ten];
@@ -296,9 +299,9 @@ public final class Solution {
                 }
 
 
-                quiz.addQuestion(new Question(token[0],
-                 data, Integer.parseInt(token[2]),
-                    Integer.parseInt(token[3]), Integer.parseInt(token[4])));
+                quiz.addQuestion(new Question(token[zero],
+                 data, Integer.parseInt(token[two]),
+                    Integer.parseInt(token[three]), Integer.parseInt(token[four])));
 
             }
             if (quiz.getsize() != 0) {
@@ -349,7 +352,8 @@ public final class Solution {
                 System.out.println(" Correct Answer! - Marks Awarded: "
                  + qu.getResponse());
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + qu.getResponse());
+                System.out.println(" Wrong Answer! - Penalty: "
+                 + qu.getResponse());
             }
             total += qu.getResponse();
 
