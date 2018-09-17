@@ -286,7 +286,7 @@ public final class Solution {
         // String[] 
         for(int i = 0; i < q; i++) {
         	Question que = quiz.getQuestion(i);
-        	System.out.println(que.getQuestionText());
+        	System.out.println(que.getQuestionText()+"("+(i+1)+")");
         	String[] choice = que.getChoice();
         	for(int j = 0; j < choice.length; j++) {
         		System.out.print(choice[j]);
@@ -308,7 +308,7 @@ public final class Solution {
         int Total=0;
         for(int i=0; i < quiz.getsize(); i++) {
         	qu = quiz.getQuestion(i);
-        	System.out.println(qu.getQuestionText()+"("+(i+1)+")");
+        	System.out.println(qu.getQuestionText());
         	if(qu.getResponse()>0) {
         		System.out.println("Correct Answer! - Marks Awarded: "+ qu.getResponse());
         	}
