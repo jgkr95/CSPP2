@@ -349,7 +349,7 @@ public final class Solution {
 			} else {
 				System.out.println(" Wrong Answer! - Penalty: " + qu.getResponse());
 			}
-			Total = qu.getResponse();
+			Total += qu.getResponse();
 
 		}
 		if (quiz.getsize() != 0) {
