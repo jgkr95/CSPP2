@@ -156,7 +156,7 @@ class Quiz {
      */
     // Question[] question;
     Quiz() {
-    	Question[] questions = new Question[10];
+    	questions = new Question[10];
     	size = 0;
     }
     // public addtoQuestionClass(Question obj) {
