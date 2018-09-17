@@ -308,7 +308,7 @@ public final class Solution {
         int Total=0;
         for(int i=0; i < quiz.getsize(); i++) {
         	qu = quiz.getQuestion(i);
-        	System.out.println(qu.getQuestionText());
+        	System.out.println(qu.getQuestionText()+"("+(i+1)+")");
         	if(qu.getResponse()>0) {
         		System.out.println("Correct Answer! - Marks Awarded: "+ qu.getResponse());
         	}
