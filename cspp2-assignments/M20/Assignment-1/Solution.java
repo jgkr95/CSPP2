@@ -320,7 +320,7 @@ public final class Solution {
 		int questioncount = quiz.getsize();
 		for (int i = 0; i < questioncount; i++) {
 			Question que = quiz.getQuestion(i);
-			System.out.println(que.getQuestionText() + "(" + (i + 1) + ")");
+			System.out.println(que.getQuestionText() + "(" + que.getMaxMarks() + ")");
 			String[] choice = que.getChoice();
 			for (int j = 0; j < choice.length-1; j++) {
 				System.out.print(choice[j]+"\t");
