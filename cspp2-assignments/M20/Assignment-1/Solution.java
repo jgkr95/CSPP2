@@ -297,7 +297,9 @@ public final class Solution {
         		Integer.parseInt(token[3]),Integer.parseInt(token[4])));
 
         }
-        System.out.println(q + " questions are added to the quiz");
+        if(quiz.getsize()!=0) {
+        	System.out.println(q + " questions are added to the quiz");
+        }
     }
     /**
      * Starts a quiz.
@@ -347,7 +349,9 @@ public final class Solution {
         	Total = qu.getResponse();
 
         }
-        System.out.println("Total Score:" + Total);
+        if(quiz.getsize()!=0) {
+        	System.out.println("Total Score:" + Total);
+        }
 
     }
 }
