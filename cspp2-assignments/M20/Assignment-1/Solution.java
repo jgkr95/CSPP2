@@ -324,7 +324,7 @@ public final class Solution {
 			String[] choice = que.getChoice();
 			for (int j = 0; j < choice.length; j++) {
 				System.out.print(choice[j]);
-				if (i < choice.length - 1) {
+				if (i < choice.length) {
 					System.out.print("\t");
 				}
 			} System.out.println();
