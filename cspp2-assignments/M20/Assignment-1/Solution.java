@@ -328,8 +328,9 @@ public final class Solution {
 					System.out.print("\t");
 				}
 			} System.out.println();
+			System.out.println();
 			que.setResponse(scan.nextLine());
-		}System.out.println();
+		}
 	}
 	/**
 	 * Displays the score report.
