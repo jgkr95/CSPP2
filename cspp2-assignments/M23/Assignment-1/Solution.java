@@ -7,19 +7,21 @@ class Solution {
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 
-		// File file1 = new File("lewis.txt");
-		// File file2 = new File("verne.txt");
-		// Scanner f1 = new Scanner(new FileReader(file1));
-		// Scanner f2 = new Scanner(new FileReader(file2));
 		String dirPath = sc.next();
 		File dir = new File(dirPath);
 		String[] files = dir.list();
+		String temp;
+		for(int i=0;i<files.length;i++) {
+			for(int j=i+1;j<files.length;j++) {
+				if((files[i].compareTo(files[j]))>0) {
+					temp = files[i];
+					files[i] = files[j];
+					files[j] = temp;
+				}
+			}
+		}
 		int[][] cos = new int[files.length][files.length];
-		// System.out.println(Arrays.toString(files));
-		// System.out.println(files[0]);
-		if (files.length == 0) {
-		    System.out.println("empty directory");
-		} else {
+		if (files.length != 0) {
 		    for (int i=0;i<files.length;i++) {
 		    	for(int j=0;j<files.length;j++) {
 		        // System.out.println(aFile);
@@ -31,11 +33,14 @@ class Solution {
 					Integer[] secondkeyvalues = secondfile.values().toArray(new Integer[0]);
 					double euclidnorm1 = Euclideannorm(firstkeyvalues), euclidnorm2 = Euclideannorm(secondkeyvalues);
 					double dotpro = dotproduct(firstfile, secondfile);
-					cos[i][j] = (int)(Cosinesimilarity(euclidnorm1,euclidnorm2,dotpro)*10000)/100;
-					
+					cos[i][j] = (int) Cosinesimilarity(euclidnorm1,euclidnorm2,dotpro)*100;
 				}
-		    }
-		}
+			}
+		} else {
+				System.out.println("empty directory");	
+				}
+		    
+		
 		// System.out.println(Arrays.deepToString(cos));
 		int max = 0;
 		int index1 = 100, index2 = 100;
@@ -45,7 +50,7 @@ class Solution {
 		for(int i=0;i<files.length;i++) {
 			System.out.print(files[i]+"\t");
 			for(int j=0;j<files.length;j++) {
-				System.out.print(cos[i][j]+"\t");
+				System.out.print(cos[i][j]+"\t    ");
 				if(cos[i][j]<100&&cos[i][j]>max) {
 					max = cos[i][j];
 					index1 = i;
@@ -60,7 +65,9 @@ class Solution {
 		for(int i=0;i<euc.length;i++) {
 			mod += Math.pow(euc[i],2);
 		}
+		// System.out.println(mod);
 		euclid = Math.sqrt(mod);
+		// System.out.println(euclid);
 		return euclid;
 	}
 	public static double dotproduct(HashMap<String, Integer> ffile1, HashMap<String, Integer> ffile2) {
@@ -83,8 +90,9 @@ class Solution {
 		HashMap<String, Integer> wordsinfile = new HashMap<String, Integer>();
 		while (s.hasNext()) {
 			String line = s.nextLine().toLowerCase();
-			line = line.replaceAll("[0-9_]", "");
+			line = line.replaceAll("[^a-z0-9_ ]", " ").replaceAll("\\s+"," ");
 			String[] words = line.split(" ");
+			//System.out.println(Arrays.toString(words));
 			for (int i = 0; i < words.length && words[i].length() > 0; i++) {
 				// System.out.println("_"+words[i]+"_");
 				if (wordsinfile.containsKey(words[i].replace(" ",""))) {
