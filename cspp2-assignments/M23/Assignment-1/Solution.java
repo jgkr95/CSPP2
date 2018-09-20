@@ -87,7 +87,7 @@ class Solution {
 
 	}
 	public static double Cosinesimilarity(double numerator1, double numerator2, double denominator) {
-		double cosine = (numerator1 * numerator2)/denominator;
+		double cosine = denominator/(numerator1 * numerator2);
 		return cosine;
 
 	}
