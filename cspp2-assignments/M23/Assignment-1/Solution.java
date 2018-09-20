@@ -11,6 +11,7 @@ class Solution {
 		// File file2 = new File("verne.txt");
 		// Scanner f1 = new Scanner(new FileReader(file1));
 		// Scanner f2 = new Scanner(new FileReader(file2));
+		try {
 		String dirPath = sc.next();
 		File dir = new File(dirPath);
 		String[] files = dir.list();
@@ -63,7 +64,10 @@ class Solution {
 				}
 			}System.out.println();
 		}
+	} catch(Exception e) {
+		System.out.println("empty directory");
 		// System.out.println("Maximum similarity is between "+ +" and ");
+	}
 	}
 	public static double Euclideannorm(Integer[] euc) {
 		double mod=0,euclid=0;
