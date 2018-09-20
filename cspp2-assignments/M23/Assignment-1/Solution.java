@@ -70,9 +70,9 @@ class Solution {
 		for(int i=0;i<euc.length;i++) {
 			mod += Math.pow(euc[i],2);
 		}
-		System.out.println(mod);
+		// System.out.println(mod);
 		euclid = Math.sqrt(mod);
-		System.out.println(euclid);
+		// System.out.println(euclid);
 		return euclid;
 	}
 	public static double dotproduct(HashMap<String, Integer> ffile1, HashMap<String, Integer> ffile2) {
