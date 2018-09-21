@@ -69,6 +69,7 @@ class Solution {
 			mod += Math.pow(euc[i],2);
 		}
 		euclid = Math.sqrt(mod);
+		// System.out.println(euclid);
 		return euclid;
 	}
 	public static double dotproduct(HashMap<String, Integer> ffile1, HashMap<String, Integer> ffile2) {
@@ -91,7 +92,7 @@ class Solution {
 		HashMap<String, Integer> wordsinfile = new HashMap<String, Integer>();
 		while (s.hasNext()) {
 			String line = s.nextLine().toLowerCase();
-			line = line.replaceAll("[^a-z ]", " ").replaceAll("\\s+"," ");
+			line = line.replaceAll("[^a-z0-9_ ]", " ").replaceAll("\\s+"," ");
 			String[] words = line.split(" ");
 			//System.out.println(Arrays.toString(words));
 			for (int i = 0; i < words.length && words[i].length() > 0; i++) {
