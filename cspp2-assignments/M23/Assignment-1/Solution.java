@@ -91,7 +91,7 @@ class Solution {
 		HashMap<String, Integer> wordsinfile = new HashMap<String, Integer>();
 		while (s.hasNext()) {
 			String line = s.nextLine().toLowerCase();
-			line = line.replaceAll("[0-9_]", " ").replaceAll("\\s+"," ");
+			line = line.replaceAll("[^a-z ]", " ").replaceAll("\\s+"," ");
 			String[] words = line.split(" ");
 			//System.out.println(Arrays.toString(words));
 			for (int i = 0; i < words.length && words[i].length() > 0; i++) {
