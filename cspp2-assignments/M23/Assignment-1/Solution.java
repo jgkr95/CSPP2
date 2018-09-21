@@ -7,10 +7,6 @@ class Solution {
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 
-		// File file1 = new File("lewis.txt");
-		// File file2 = new File("verne.txt");
-		// Scanner f1 = new Scanner(new FileReader(file1));
-		// Scanner f2 = new Scanner(new FileReader(file2));
 		try {
 		String dirPath = sc.next();
 		File dir = new File(dirPath);
@@ -36,13 +32,11 @@ class Solution {
 		        // System.out.println(aFile);
 			        HashMap<String, Integer> firstfile = readfile(new Scanner(new FileReader(dir+"//"+files[i])));
 					HashMap<String, Integer> secondfile = readfile(new Scanner(new FileReader(dir+"//"+files[j])));
-					// System.out.println(Arrays.asList(firstfile));
-					// System.out.println(Arrays.asList(secondfile));
 					Integer[] firstkeyvalues = firstfile.values().toArray(new Integer[0]);
 					Integer[] secondkeyvalues = secondfile.values().toArray(new Integer[0]);
 					double euclidnorm1 = Euclideannorm(firstkeyvalues), euclidnorm2 = Euclideannorm(secondkeyvalues);
 					double dotpro = dotproduct(firstfile, secondfile);
-					cos[i][j] = (int)(Cosinesimilarity(euclidnorm1,euclidnorm2,dotpro)*10000)/100;
+					cos[i][j] = (int) Cosinesimilarity(euclidnorm1,euclidnorm2,dotpro)*100;
 					
 				}
 		    }
@@ -74,9 +68,7 @@ class Solution {
 		for(int i=0;i<euc.length;i++) {
 			mod += Math.pow(euc[i],2);
 		}
-		// System.out.println(mod);
 		euclid = Math.sqrt(mod);
-		// System.out.println(euclid);
 		return euclid;
 	}
 	public static double dotproduct(HashMap<String, Integer> ffile1, HashMap<String, Integer> ffile2) {
@@ -90,8 +82,8 @@ class Solution {
 		return similarity;
 
 	}
-	public static double Cosinesimilarity(double numerator1, double numerator2, double denominator) {
-		double cosine = denominator/(numerator1 * numerator2);
+	public static double Cosinesimilarity(double denominator1, double denominator2, double numerator) {
+		double cosine = numerator/(denominator1 * denominator2);
 		return cosine;
 
 	}
@@ -99,7 +91,7 @@ class Solution {
 		HashMap<String, Integer> wordsinfile = new HashMap<String, Integer>();
 		while (s.hasNext()) {
 			String line = s.nextLine().toLowerCase();
-			line = line.replaceAll("[^a-z0-9_ ]", " ").replaceAll("\\s+"," ");
+			line = line.replaceAll("[0-9_]", " ").replaceAll("\\s+"," ");
 			String[] words = line.split(" ");
 			//System.out.println(Arrays.toString(words));
 			for (int i = 0; i < words.length && words[i].length() > 0; i++) {
