@@ -68,7 +68,7 @@ class Todoist {
 		taskobj[size++] = t;
 	}
 	public String toString() {
-		return taskobj[size-1].toString();
+		return taskobj.toString();
 	}
 	public Task getNextTask(String name) {
 		for(int i=0;i<size;i++) {
