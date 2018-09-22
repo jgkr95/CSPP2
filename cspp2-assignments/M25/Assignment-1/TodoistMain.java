@@ -12,7 +12,7 @@ public class TodoistMain {
     /**
      * Constructs the object.
      */
-    TodoistMain() {
+    private TodoistMain() {
 
     }
     /**
