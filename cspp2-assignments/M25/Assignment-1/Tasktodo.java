@@ -15,7 +15,7 @@ class Task {
 			throw new Exception("Invalid timeToComplete "+timeperiod1);
 		}
 		if(!(progress1.equals("todo")||progress1.equals("done"))) {
-			throw new Exception("Invalid status "+progress);
+			throw new Exception("Invalid status "+progress1);
 		}
 		tasktitle=tasktitle1;
 		taskowner=taskowner1;
