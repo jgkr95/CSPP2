@@ -59,9 +59,9 @@ class Task {
 class Todoist {
 	Task[] taskobj;
 	int size;
-	final int twenty = 20;
+	final int fifty = 50;
 	Todoist() {
-		taskobj = new Task[twenty];
+		taskobj = new Task[fifty];
 		size = 0;
 	}
 	public void addTask(Task t) {
