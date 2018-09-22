@@ -86,12 +86,13 @@ class Todoist {
 		Task[] nexttasks = new Task[count];
 		int sizenexttask = 0;
 		for(int i=0;i<size;i++) {
+			if(sizenexttask>count) {
 			if(taskobj[i].gettaskowner().equals(name)&&taskobj[i].getimportant()&&(!(taskobj[i].geturgent()))&&taskobj[i].getprogress().equals("todo")) {
 				nexttasks[sizenexttask++]=taskobj[i];
 			} else if(taskobj[i].gettaskowner().equals(name)&&taskobj[i].getimportant()&&taskobj[i].geturgent()&&taskobj[i].getprogress().equals("todo")) {
 				nexttasks[sizenexttask++]=taskobj[i];
 			}
-		}
+		}}
 		return nexttasks;
 
 	}
