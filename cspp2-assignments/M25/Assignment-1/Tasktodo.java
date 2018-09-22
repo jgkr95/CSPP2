@@ -15,7 +15,7 @@ class Task {
 			throw new Exception("Invalid timeToComplete "+timeperiod1);
 		}
 		if(!(progress1.equals("todo")||progress1.equals("done"))) {
-			throw new Exception("Invalid status");
+			throw new Exception("Invalid status "+progress);
 		}
 		tasktitle=tasktitle1;
 		taskowner=taskowner1;
@@ -40,7 +40,19 @@ class Task {
 		return timeperiod;
 	}
 	public String toString() {
-		String str = tasktitle + ", "+taskowner+", "+timeperiod+", "+importantornot+", "+urgentornot+", "+progress;
+		String imp;
+		String urg;
+		if(importantornot) {
+			imp = "Important";
+		} else {
+			imp = "Not Important";
+		}
+		if(urgentornot) {
+			urg = "Urgent";
+		} else {
+			urg = "Not Urgent";
+		}
+		String str = tasktitle + ", "+taskowner+", "+timeperiod+", "+imp+", "+urg+", "+progress;
 		return str;
 	}
 } 
