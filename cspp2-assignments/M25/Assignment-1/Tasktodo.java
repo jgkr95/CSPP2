@@ -99,7 +99,8 @@ class Todoist {
 	public int totalTime4Completion() {
 		int time=0;
 		for(int i=0;i<size;i++) {
-			time += taskobj[i].gettimeperiod();
+			if(taskobj[i].getprogress().equals("todo"))
+				time += taskobj[i].gettimeperiod();
 		}
 		return time;
 	}
