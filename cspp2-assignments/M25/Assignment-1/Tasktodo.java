@@ -78,10 +78,13 @@ class Todoist {
 		for(int i=0;i<size;i++) {
 			if(taskobj[i].gettaskowner().equals(name)&&taskobj[i].getimportant()&&(!(taskobj[i].geturgent()))&&taskobj[i].getprogress().equals("todo")) {
 				return taskobj[i];
-			} else if(taskobj[i].gettaskowner().equals(name)&&taskobj[i].getimportant()&&taskobj[i].geturgent()&&taskobj[i].getprogress().equals("todo")) {
+			} 
+			
+		}
+		for(int i=0;i<size;i++) {
+			if(taskobj[i].gettaskowner().equals(name)&&taskobj[i].getimportant()&&taskobj[i].geturgent()&&taskobj[i].getprogress().equals("todo")) {
 				return taskobj[i];
 			}
-			
 		}
 		return null;
 
