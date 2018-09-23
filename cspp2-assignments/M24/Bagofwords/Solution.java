@@ -1,8 +1,6 @@
 import java.io.FileReader;
 import java.io.File;
-import java.io.BufferedReader;
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.HashMap;
 /**
  * Class for solution.
@@ -87,8 +85,8 @@ public final class Solution {
                     }
                 } System.out.println();
             }
-            System.out.println("Maximum similarity is between " +
-                 files[index1] + " and " + files[index2]);
+            System.out.println("Maximum similarity is between "
+                 + files[index1] + " and " + files[index2]);
         } catch (Exception e) {
             System.out.println("empty directory");
             // System.out.println("Maximum similarity is between "+ +" and ");
@@ -101,7 +99,7 @@ public final class Solution {
      *
      * @return     { double }
      */
-    public static double euclideannorm(Integer[] euc) {
+    public static double euclideannorm(final Integer[] euc) {
         double mod = 0, euclid = 0;
         for (int i = 0; i < euc.length; i++) {
             mod += Math.pow(euc[i], 2);
@@ -119,8 +117,8 @@ public final class Solution {
      *
      * @return     { double }
      */
-    public static double dotproduct(HashMap<String, Integer> ffile1,
-         HashMap<String, Integer> ffile2) {
+    public static double dotproduct(final HashMap<String, Integer> ffile1,
+         final HashMap<String, Integer> ffile2) {
         String[] file1keys = ffile1.keySet().toArray(new String[0]);
         int similarity = 0;
         for (int i = 0; i < file1keys.length; i++) {
@@ -140,8 +138,8 @@ public final class Solution {
      *
      * @return     { double }
      */
-    public static double cosinesimilarity(double numerator1,
-         double numerator2, double denominator) {
+    public static double cosinesimilarity(final double numerator1,
+         final double numerator2, final double denominator) {
         double cosine = denominator / (numerator1 * numerator2);
         return cosine;
 
