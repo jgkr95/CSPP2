@@ -56,14 +56,15 @@ class Solution {
 		for(int i=0;i<files.length;i++) {
 			System.out.print(files[i]+"\t");
 			for(int j=0;j<files.length;j++) {
-				System.out.print(cos[i][j]+"\t  ");
+				System.out.print("%.1f"+cos[i][j]+"\t  ");
 				if(cos[i][j]<100&&cos[i][j]>max) {
 					max = cos[i][j];
 					index1 = i;
 					index2 = j;
 				}
-			}System.out.println("Maximum similarity is between "+ files[index1] +" and "+ files[index2]);
+			}System.out.println();
 		}
+		System.out.println("Maximum similarity is between "+ files[index1] +" and "+ files[index2]);
 	} catch(Exception e) {
 		System.out.println("empty directory");
 		// System.out.println("Maximum similarity is between "+ +" and ");
