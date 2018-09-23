@@ -65,7 +65,7 @@ class Solution {
                             euclidnorm2 = Euclideannorm(secondkeyvalues);
                         double dotpro = dotproduct(firstfile, secondfile);
                         cos[i][j] = (int)(Cosinesimilarity(euclidnorm1,
-                             euclidnorm2, dotpro) * 10000) / 100;
+                             euclidnorm2, dotpro) * 100);
 
                     }
                 }
