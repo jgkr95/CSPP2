@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * Class for solution.
  */
-class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -21,7 +21,7 @@ class Solution {
      *
      * @throws     Exception  { exception_description }
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(final String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
         // File file1 = new File("lewis.txt");
@@ -61,10 +61,10 @@ class Solution {
                             toArray(new Integer[0]);
                         Integer[] secondkeyvalues = secondfile.values().
                             toArray(new Integer[0]);
-                        double euclidnorm1 = Euclideannorm(firstkeyvalues),
-                            euclidnorm2 = Euclideannorm(secondkeyvalues);
+                        double euclidnorm1 = euclideannorm(firstkeyvalues),
+                            euclidnorm2 = euclideannorm(secondkeyvalues);
                         double dotpro = dotproduct(firstfile, secondfile);
-                        cos[i][j] = (int)(Cosinesimilarity(euclidnorm1,
+                        cos[i][j] = (int)(cosinesimilarity(euclidnorm1,
                              euclidnorm2, dotpro) * 100);
 
                     }
@@ -101,7 +101,7 @@ class Solution {
      *
      * @return     { double }
      */
-    public static double Euclideannorm(Integer[] euc) {
+    public static double euclideannorm(Integer[] euc) {
         double mod = 0, euclid = 0;
         for (int i = 0; i < euc.length; i++) {
             mod += Math.pow(euc[i], 2);
@@ -140,7 +140,7 @@ class Solution {
      *
      * @return     { double }
      */
-    public static double Cosinesimilarity(double numerator1,
+    public static double cosinesimilarity(double numerator1,
          double numerator2, double denominator) {
         double cosine = denominator / (numerator1 * numerator2);
         return cosine;
