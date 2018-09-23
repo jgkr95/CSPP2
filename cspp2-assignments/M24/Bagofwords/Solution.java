@@ -12,7 +12,6 @@ public final class Solution {
     private Solution() {
 
     }
-    public final int hundred = 100;
     /**
      * { main function }.
      *
@@ -32,6 +31,7 @@ public final class Solution {
             File dir = new File(dirPath);
             String[] files = dir.list();
             String temp;
+            final int hundred = 100;
             for (int i = 0; i < files.length; i++) {
                 for (int j = i + 1; j < files.length; j++) {
                     if ((files[i].compareTo(files[j])) > 0) {
@@ -65,15 +65,15 @@ public final class Solution {
                         double euclidnorm1 = euclideannorm(firstkeyvalues),
                             euclidnorm2 = euclideannorm(secondkeyvalues);
                         double dotpro = dotproduct(firstfile, secondfile);
-                        cos[i][j] = (int)(cosinesimilarity(euclidnorm1,
-                             euclidnorm2, dotpro) * 100);
+                        cos[i][j] = (int) (cosinesimilarity(euclidnorm1,
+                             euclidnorm2, dotpro) * hundred);
 
                     }
                 }
             }
             // System.out.println(Arrays.deepToString(cos));
             int max = 0;
-            int index1 = 100, index2 = 100;
+            int index1 = hundred, index2 = hundred;
             for (int i = 0; i < files.length; i++) {
                 System.out.print("  \t" + files[i]);
             } System.out.println();
@@ -81,7 +81,7 @@ public final class Solution {
                 System.out.print(files[i] + "\t");
                 for (int j = 0; j < files.length; j++) {
                     System.out.print(cos[i][j] + "\t  ");
-                    if (cos[i][j] < 100 && cos[i][j] > max) {
+                    if (cos[i][j] < hundred && cos[i][j] > max) {
                         max = cos[i][j];
                         index1 = i;
                         index2 = j;
