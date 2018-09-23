@@ -12,6 +12,7 @@ public final class Solution {
     private Solution() {
 
     }
+    public final int hundred = 100;
     /**
      * { main function }.
      *
@@ -50,9 +51,11 @@ public final class Solution {
                     for (int j = 0; j < files.length; j++) {
                         // System.out.println(aFile);
                         HashMap<String, Integer> firstfile =
-                         readfile(new Scanner(new FileReader(dir + "//" + files[i])));
+                         readfile(new Scanner(new FileReader(dir + "//"
+                             + files[i])));
                         HashMap<String, Integer> secondfile =
-                         readfile(new Scanner(new FileReader(dir + "//" + files[j])));
+                         readfile(new Scanner(new FileReader(dir + "//"
+                             + files[j])));
                         // System.out.println(Arrays.asList(firstfile));
                         // System.out.println(Arrays.asList(secondfile));
                         Integer[] firstkeyvalues = firstfile.values().
@@ -123,7 +126,8 @@ public final class Solution {
         int similarity = 0;
         for (int i = 0; i < file1keys.length; i++) {
             if (ffile2.containsKey(file1keys[i])) {
-                similarity += ffile1.get(file1keys[i]) * ffile2.get(file1keys[i]);
+                similarity += ffile1.get(file1keys[i])
+                     * ffile2.get(file1keys[i]);
             }
         }
         return similarity;
@@ -151,7 +155,7 @@ public final class Solution {
      *
      * @return     { hashmap }
      */
-    public static HashMap<String, Integer> readfile(Scanner s) {
+    public static HashMap<String, Integer> readfile(final Scanner s) {
         HashMap<String, Integer> wordsinfile = new HashMap<String, Integer>();
         while (s.hasNext()) {
             String line = s.nextLine().toLowerCase();
