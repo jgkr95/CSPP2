@@ -56,7 +56,7 @@ class Solution {
 		for(int i=0;i<files.length;i++) {
 			System.out.print(files[i]+"\t");
 			for(int j=0;j<files.length;j++) {
-				System.out.print("%.1f"+cos[i][j]+"\t  ");
+				System.out.print(String.format("%.1f", cos[i][j]+"\t  "));
 				if(cos[i][j]<100&&cos[i][j]>max) {
 					max = cos[i][j];
 					index1 = i;
